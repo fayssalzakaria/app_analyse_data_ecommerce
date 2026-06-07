@@ -18,14 +18,14 @@ import streamlit as st
 
 from core.data_loader import obtenir_dataframe_actif, reinitialiser_si_changement_dataset
 from core.extract import extraire_couleur_contextuelle_serie, extraire_dimensions_v2_serie
-from core.recat import executer_recat, _commentaire
+from core.recat import executer_recat, _commentaire, colonne_predite
 
 WORK_KEY = "work_enriched_df"
 SRC_KEY = "work_enriched_src"
 
 RECAT_COLS = ["Nature_predite", "Nature_Score", "Nature_Commentaire",
               "Nature_Score_Pass1", "Nature_Score_Pass2"]
-UNIVERS_COLS = ["Univers_predite", "Univers_Score", "Univers_Commentaire"]
+UNIVERS_COLS = ["Univers_predit", "Univers_Score", "Univers_Commentaire"]
 COLOR_COLS = ["couleur_extraite", "couleurs_toutes", "nb_couleurs_detectees",
               "couleur_decision", "couleur_score", "Couleur_Commentaire"]
 DIM_COLS = ["L_cm", "l_cm", "H_cm", "dim_label", "diametre_cm", "dimension_simple_cm",
@@ -80,7 +80,7 @@ def calculer_recat(cible: str = "Nature", two_pass: bool = False,
         return {"ok": False, "msg": "Aucun dataset chargé."}
     # On retire d'éventuelles colonnes de prédiction précédentes pour cette cible,
     # afin de toujours réentraîner depuis la cible d'origine.
-    a_retirer = [f"{cible}_predite", f"{cible}_Score", f"{cible}_Commentaire",
+    a_retirer = [colonne_predite(cible), f"{cible}_Score", f"{cible}_Commentaire",
                  f"{cible}_Score_Pass1", f"{cible}_Score_Pass2"]
     base = df.drop(columns=[c for c in a_retirer if c in df.columns], errors="ignore")
     out, info = executer_recat(base, cible=cible, two_pass=two_pass,
@@ -138,7 +138,7 @@ def calculer_univers(use_vendeur: bool = True, use_prix: bool = True) -> dict:
         out_b, info_b = executer_recat(df, cible="Univers", colonnes_aux=["Nature_predite"],
                                        use_vendeur=use_vendeur, use_prix=use_prix)
         if info_b.get("ok"):
-            univ_pred = univ_pred.where(~manque, out_b["Univers_predite"])
+            univ_pred = univ_pred.where(~manque, out_b["Univers_predit"])
             univ_score = univ_score.where(~manque, out_b["Univers_Score"])
             source = source.where(~manque, "modele_libelle")
 
@@ -146,7 +146,7 @@ def calculer_univers(use_vendeur: bool = True, use_prix: bool = True) -> dict:
     univ_pred = univ_pred.where(univ_pred.notna(), df["Univers"])
     orig = df["Univers"].fillna("__VIDE__").astype(str).values
     pred_str = univ_pred.fillna("__VIDE__").astype(str).values
-    df["Univers_predite"] = pd.Series(pred_str, index=df.index).where(lambda s: s != "__VIDE__", np.nan)
+    df["Univers_predit"] = pd.Series(pred_str, index=df.index).where(lambda s: s != "__VIDE__", np.nan)
     df["Univers_Score"] = np.round(univ_score.fillna(0.0).astype(float).values, 4)
     is_modif = pred_str != orig
     df["Univers_Commentaire"] = _commentaire(is_modif, df["Univers_Score"].values)

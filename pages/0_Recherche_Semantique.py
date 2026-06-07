@@ -33,8 +33,8 @@ if df_base is None:
     st.stop()
 
 # Recherche possible sur le dataset brut (catégories d'origine) OU sur la version
-# corrigée (Nature_predite / Univers_predite), si la recatégorisation a été lancée.
-has_recat = enrich.possede_colonnes(["Nature_predite"]) or enrich.possede_colonnes(["Univers_predite"])
+# corrigée (Nature_predite / Univers_predit), si la recatégorisation a été lancée.
+has_recat = enrich.possede_colonnes(["Nature_predite"]) or enrich.possede_colonnes(["Univers_predit"])
 source_dataset = st.radio(
     "Source de recherche",
     ["Dataset brut", "Dataset corrige (recategorise)"],
@@ -56,8 +56,8 @@ if source_dataset == "Dataset corrige (recategorise)":
     if "Nature_predite" in df.columns:
         df["Nature"] = df["Nature_predite"].fillna(df["Nature"])
         appliquees.append("Nature")
-    if "Univers_predite" in df.columns:
-        df["Univers"] = df["Univers_predite"].fillna(df["Univers"])
+    if "Univers_predit" in df.columns:
+        df["Univers"] = df["Univers_predit"].fillna(df["Univers"])
         appliquees.append("Univers")
     st.success("Recherche branchée sur les catégories corrigées : " + ", ".join(appliquees) + ".")
 else:
@@ -509,7 +509,7 @@ if (_go or query) and query.strip():
             "Vendeur",
             "Libelle",
             "Univers",
-            "Univers_predite",
+            "Univers_predit",
             "Nature",
             "Nature_predite",
             "Nature_Score",

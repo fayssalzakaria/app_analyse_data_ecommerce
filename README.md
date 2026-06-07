@@ -26,6 +26,7 @@ Elle fonctionne avec n'importe quel fichier tabulaire (Excel, CSV, Parquet) comp
 - Recherche multi-critères (texte libre + prix / couleur / dimension / vendeur).
 - Visualisations : graphe relationnel, projection 2D/3D, diagramme de Sankey.
 - Export du dataset enrichi en CSV, Excel ou Parquet.
+- Assistant IA (RAG + Gemini) : suggère une Nature/Univers pour les libellés sans catégorie (existante ou nouvelle) et répond à des questions sur le dataset.
 
 ## Installation
 
@@ -84,6 +85,7 @@ Le `.gitignore` exclut les classeurs Excel (`*.xlsb`, `*.xls`, `*.xlsx`), `data/
 | 5 | Extraction couleur | Couleurs extraites des libellés (bouton) |
 | 6 | Extraction dimension | Dimensions L x l x H, diamètre, cote isolée (bouton) |
 | 7 | Export | Téléchargement du dataset enrichi (CSV / Excel / Parquet) |
+| 8 | Assistant IA | RAG + Gemini : suggestions de catégories (lignes sans Nature/Univers) + chat |
 
 ### Enrichissement à la demande
 
@@ -114,8 +116,9 @@ app_analyse_data_ecommerce/
 │   ├── metrics.py          Statistiques globales
 │   ├── search.py           Recherche TF-IDF et suggestion
 │   ├── embeddings.py       Encodage sémantique et réduction de dimension
-│   └── cache_utils.py      Cache disque
-├── pages/                  Huit pages Streamlit (0 à 7)
+│   ├── cache_utils.py      Cache disque
+│   └── agent.py            Assistant IA (RAG + Gemini)
+├── pages/                  Neuf pages Streamlit (0 à 8)
 └── data/
     ├── sample/             Jeu de démonstration synthétique (suivi)
     ├── cache/              Caches (ignoré par git)
@@ -132,6 +135,16 @@ Par défaut, toute l'analyse repose sur TF-IDF (scikit-learn) ; `requirements.tx
   export APP_USE_SENTENCE_TRANSFORMERS=1
   export APP_USE_UMAP=1
   ```
+
+## Assistant IA (page 8, optionnel)
+
+L'assistant aide à **suggérer une Nature/Univers** pour les libellés qui n'en ont pas (avant ou après recatégorisation) et répond à des questions sur le dataset. Approche **RAG** : on récupère les libellés similaires déjà catégorisés (index TF-IDF) puis on demande à **Gemini** une suggestion — catégorie existante ou, si rien ne convient, une **nouvelle** (ce que le classifieur de recat ne peut pas faire).
+
+Configuration de la clé (le reste de l'app fonctionne sans) :
+- **En local** : créer `.streamlit/secrets.toml` (déjà gitignoré) avec `GEMINI_API_KEY = "..."`.
+- **Sur Hugging Face** : ajouter `GEMINI_API_KEY` dans les secrets du Space.
+
+Modèle par défaut : `gemini-2.5-flash` (gratuit). L'assistant n'envoie au modèle qu'un résumé du dataset et quelques libellés récupérés — jamais l'intégralité des données.
 
 ## Adapter à un autre jeu de données
 

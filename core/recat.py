@@ -31,6 +31,14 @@ VENDEUR_TOP_K = 8
 RECAT_VERSION = "recat-generic-v3"
 
 
+def colonne_predite(cible: str) -> str:
+    """Nom de la colonne de prédiction, accordé en genre.
+
+    « Univers » est masculin -> 'Univers_predit' ; « Nature » est féminin -> 'Nature_predite'.
+    """
+    return "Univers_predit" if cible.lower() == "univers" else f"{cible}_predite"
+
+
 def _norm_lib(s) -> str | None:
     """Normalise un libellé (minuscules, accents conservés, espaces compactés)."""
     if pd.isna(s):
@@ -194,7 +202,7 @@ def executer_recat(df: pd.DataFrame, cible: str = "Nature", two_pass: bool = Fal
     (+ en 2 passes : <cible>_Score_Pass1, <cible>_Score_Pass2).
     """
     out = df.copy()
-    col_pred = f"{cible}_predite"
+    col_pred = colonne_predite(cible)
     col_score = f"{cible}_Score"
     col_comm = f"{cible}_Commentaire"
 

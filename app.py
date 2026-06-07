@@ -7,10 +7,11 @@ import streamlit as st
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from core.data_loader import (
-    vider_cache_dataset,
     charger_dataset,
     afficher_filtres_sidebar,
     reinitialiser_si_changement_dataset,
+    recharger_dataset_courant,
+    reinitialiser_tout,
 )
 from core.metrics import statistiques_globales
 
@@ -30,9 +31,12 @@ def main():
     with st.sidebar:
         st.markdown("### Fichier source")
         # Aucun fichier n'est chargé par défaut : l'utilisateur fournit le sien.
+        # Clé dynamique : l'incrémenter (au reset) vide réellement le widget d'upload.
+        st.session_state.setdefault("uploader_key", 0)
         uploaded = st.file_uploader(
             "Charger un fichier (.xlsb, .xlsx, .csv, .parquet)",
             type=["xlsb", "xlsx", "csv", "parquet"],
+            key=f"file_uploader_{st.session_state['uploader_key']}",
         )
         if uploaded is not None:
             # On ne recrée le fichier temporaire que si l'upload a changé
@@ -61,14 +65,15 @@ def main():
         if reinitialiser_si_changement_dataset():
             st.toast("Nouveau dataset chargé : état précédent réinitialisé.")
 
-        if st.button("Forcer rechargement dataset"):
-            vider_cache_dataset(st.session_state.get("dataset_path"))
-            st.session_state.pop("recat_done", None)
-            st.session_state.pop("recat_corrections", None)
-            st.session_state.pop("colors_series", None)
-            st.session_state.pop("colors_details", None)
-            st.session_state.pop("colors_context_details", None)
-            st.session_state.pop("dims_df", None)
+        b1, b2 = st.columns(2)
+        if b1.button("🔄 Recharger", help="Recalcule à partir du fichier courant (vide son cache)."):
+            recharger_dataset_courant()
+            st.rerun()
+        if b2.button("🗑️ Tout réinitialiser",
+                     help="Décharge le fichier ET supprime tout le cache (disque + mémoire)."):
+            _next_key = st.session_state.get("uploader_key", 0) + 1
+            reinitialiser_tout()
+            st.session_state["uploader_key"] = _next_key  # nouveau widget d'upload vide
             st.rerun()
 
     path = st.session_state.get("dataset_path")

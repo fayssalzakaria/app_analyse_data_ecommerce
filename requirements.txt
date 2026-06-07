@@ -15,6 +15,9 @@ xlsxwriter>=3.1        # export Excel
 # Graphe relationnel (page 2) — léger
 pyvis>=0.3
 
+# Assistant IA (page 8) — RAG + Gemini
+google-genai>=0.3
+
 # --- Optionnel : projection sémantique UMAP (page 2), désactivée par défaut ---
 # Sans ces paquets, l'app retombe automatiquement sur TF-IDF + SVD.
 # À installer seulement si APP_USE_SENTENCE_TRANSFORMERS=1 et/ou APP_USE_UMAP=1 :

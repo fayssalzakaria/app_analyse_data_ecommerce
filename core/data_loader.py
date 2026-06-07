@@ -205,9 +205,11 @@ _DERIVED_PREFIXES = (
     "_viz_options",     # caches d'options de la page graphe
     "cmp_",             # widgets du mode comparaison
     "mc_query",         # recherche multi-critères (page 0)
-    "recat_",           # anciens résultats de recat éventuels
+    "recat_",           # infos de recatégorisation
     "colors_",          # anciens caches couleur
     "dims_",            # anciens caches dimension
+    "agent_",           # chat / suggestions de l'assistant IA
+    "_agent_",          # index de recherche de l'assistant
 )
 
 
@@ -220,11 +222,57 @@ def reinitialiser_si_changement_dataset() -> bool:
     path = st.session_state.get("dataset_path")
     if st.session_state.get(_SEEN_KEY) == path:
         return False
+    _purger_etat_derive()
+    st.session_state[_SEEN_KEY] = path
+    return True
+
+
+def _purger_etat_derive() -> None:
+    """Supprime les clés de session dérivées du dataset (enrichissements, filtres, caches, agent)."""
     for k in list(st.session_state.keys()):
         if isinstance(k, str) and k.startswith(_DERIVED_PREFIXES):
             del st.session_state[k]
-    st.session_state[_SEEN_KEY] = path
-    return True
+
+
+def recharger_dataset_courant() -> None:
+    """Recharge le fichier courant : vide son cache disque/mémoire et purge l'état dérivé.
+
+    Le fichier reste chargé (on recalcule à partir de lui).
+    """
+    vider_cache_dataset(st.session_state.get("dataset_path"))
+    _purger_etat_derive()
+
+
+def reinitialiser_tout() -> None:
+    """Réinitialisation complète : décharge le fichier et supprime TOUT le cache.
+
+    - vide les caches mémoire de Streamlit (cache_data / cache_resource),
+    - supprime les fichiers de cache disque (data/cache/*, sauf .gitkeep),
+    - efface entièrement l'état de session (fichier chargé + tous les calculs).
+    """
+    try:
+        st.cache_data.clear()
+    except Exception:
+        pass
+    try:
+        st.cache_resource.clear()
+    except Exception:
+        pass
+
+    dossier = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "cache")
+    try:
+        for nom in os.listdir(dossier):
+            if nom == ".gitkeep":
+                continue
+            chemin = os.path.join(dossier, nom)
+            if os.path.isfile(chemin):
+                os.remove(chemin)
+    except Exception:
+        pass
+
+    # On vide toute la session (fichier, enrichissements, filtres, agent, etc.).
+    for k in list(st.session_state.keys()):
+        del st.session_state[k]
 
 
 def afficher_filtres_sidebar(df: pd.DataFrame) -> None:

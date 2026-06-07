@@ -19,6 +19,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from core.data_loader import appliquer_filtres_globaux, afficher_filtres_sidebar
 from core import enrich
+from core.recat import colonne_predite
 
 
 st.set_page_config(page_title="Categorisation Nature / Univers", page_icon="🎯", layout="wide")
@@ -36,7 +37,7 @@ cible = st.radio(
     horizontal=True,
     help="L'Univers est déduit de la Nature corrigée : lance d'abord la Nature.",
 )
-col_pred = f"{cible}_predite"
+col_pred = colonne_predite(cible)
 col_score = f"{cible}_Score"
 col_comm = f"{cible}_Commentaire"
 

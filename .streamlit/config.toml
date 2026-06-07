@@ -1,0 +1,8 @@
+# Configuration Streamlit (versionnée — pas de secret ici).
+[server]
+# Taille max d'upload en Mo (utile pour les gros fichiers Excel/CSV sur Hugging Face).
+maxUploadSize = 1024
+
+[theme]
+base = "light"
+primaryColor = "#4f6df5"
