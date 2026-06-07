@@ -1,9 +1,9 @@
 name: Sync vers Hugging Face Space
 
-# À chaque push sur main (et manuellement), pousse le dépôt vers le Space HF.
+# À chaque push sur main/master (et manuellement), pousse le dépôt vers le Space HF.
 on:
   push:
-    branches: [main]
+    branches: [main, master]
   workflow_dispatch:
 
 jobs:

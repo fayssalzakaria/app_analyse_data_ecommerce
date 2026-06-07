@@ -143,7 +143,7 @@ L'application est hébergée sur **Hugging Face Spaces** : https://huggingface.c
 
 Le Space utilise le **SDK Streamlit** : c'est l'en-tête YAML en haut de ce README (`sdk: streamlit`, `app_file: app.py`) qui le configure, et `requirements.txt` qui fournit les dépendances. Aucune configuration supplémentaire n'est nécessaire.
 
-**Mise à jour automatique** : un workflow GitHub Actions (`.github/workflows/sync-to-huggingface.yml`) pousse le dépôt vers le Space à chaque `git push` sur `main`. Il faut pour cela :
+**Mise à jour automatique** : un workflow GitHub Actions (`.github/workflows/sync-to-huggingface.yml`) pousse le dépôt vers le Space à chaque `git push` sur `main` ou `master`. Il faut pour cela :
 
 1. créer un jeton Hugging Face (Settings → Access Tokens, droits **Write**) ;
 2. l'ajouter en secret du dépôt GitHub sous le nom `HF_TOKEN` (Settings → Secrets and variables → Actions).
