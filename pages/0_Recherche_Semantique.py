@@ -32,33 +32,39 @@ if df_base is None:
     st.warning("Aucun dataset charge.")
     st.stop()
 
-# Recherche possible sur le dataset brut (Nature d'origine) OU sur la version recategorisee
-# (Nature_predite), si la recategorisation a ete lancee dans l'app.
-has_recat = enrich.possede_colonnes(["Nature_predite"])
+# Recherche possible sur le dataset brut (catégories d'origine) OU sur la version
+# corrigée (Nature_predite / Univers_predite), si la recatégorisation a été lancée.
+has_recat = enrich.possede_colonnes(["Nature_predite"]) or enrich.possede_colonnes(["Univers_predite"])
 source_dataset = st.radio(
     "Source de recherche",
     ["Dataset brut", "Dataset corrige (recategorise)"],
     index=0,
     horizontal=True,
-    help="Brut = Nature d'origine. Corrige = Nature recategorisee (Nature_predite).",
+    help="Brut = catégories d'origine. Corrigé = catégories recatégorisées dans l'app.",
 )
 
 if source_dataset == "Dataset corrige (recategorise)":
     if not has_recat:
         st.info(
-            "Veuillez d'abord lancer la **recategorisation** sur la page "
-            "« 🎯 Algo categorisation Nature » pour activer cette source."
+            "Veuillez d'abord lancer la **recategorisation** (Nature et/ou Univers) sur la page "
+            "« 🎯 Catégorisation Nature / Univers » pour activer cette source."
         )
         st.stop()
     df = df_base.copy()
-    df["Nature"] = df["Nature_predite"].fillna(df["Nature"])  # recherche sur la categorie corrigee
-    st.success("Recherche branchee sur les Natures recategorisees (Nature_predite).")
+    # On remplace les catégories d'origine par les versions corrigées disponibles.
+    appliquees = []
+    if "Nature_predite" in df.columns:
+        df["Nature"] = df["Nature_predite"].fillna(df["Nature"])
+        appliquees.append("Nature")
+    if "Univers_predite" in df.columns:
+        df["Univers"] = df["Univers_predite"].fillna(df["Univers"])
+        appliquees.append("Univers")
+    st.success("Recherche branchée sur les catégories corrigées : " + ", ".join(appliquees) + ".")
 else:
     df = df_base.copy()
 
 afficher_filtres_sidebar(df)
 df = appliquer_filtres_globaux(df)
-is_clean_source = source_dataset != "Dataset brut"
 
 # ============================================================
 # Recherche multi-critere : une seule barre en langage naturel.
@@ -316,9 +322,17 @@ if _mc_q.strip():
         st.caption(f"{_subn:,} lignes correspondent · {_n_lib:,} libellés · {len(_res):,} couples (libellé, prix).")
     else:
         st.caption(f"{_subn:,} lignes correspondent aux critères · {_n_lib:,} libellés.")
-    _cols = [c for c in ["score", "prix", "Libelle", "dimension", "Univers", "Vendeur", "nb_lignes", "Nature"] if c in _res.columns]
-    if not _res.empty and _cols:
-        st.dataframe(_res[_cols], use_container_width=True, hide_index=True, height=460)
+    # "score" = similarité texte (TF-IDF). On le renomme "pertinence" et on l'enlève
+    # s'il est vide (recherche par critères seuls, sans texte).
+    _res_aff = _res.rename(columns={"score": "pertinence"})
+    _ordre = ["Libelle", "Nature", "Univers", "prix", "dimension", "Vendeur", "nb_lignes", "pertinence"]
+    if "pertinence" in _res_aff.columns and _res_aff["pertinence"].isna().all():
+        _res_aff = _res_aff.drop(columns=["pertinence"])
+    _cols = [c for c in _ordre if c in _res_aff.columns]
+    if not _res_aff.empty and _cols:
+        if "pertinence" in _cols:
+            st.caption("« pertinence » = similarité texte avec le libellé (0 à 1).")
+        st.dataframe(_res_aff[_cols], use_container_width=True, hide_index=True, height=460)
     else:
         st.info("Aucun résultat pour ces critères.")
 
@@ -447,23 +461,36 @@ if (_go or query) and query.strip():
         st.stop()
 
     st.subheader("Top libelles similaires")
-    display_cols = [
-        "score",
+    # On met le libellé et ses catégories d'abord ; le score de similarité (texte) en dernier.
+    display_cols = [c for c in [
         "Libelle",
-        "nb_lignes",
         "Nature_majoritaire",
         "Univers_majoritaire",
         "Vendeur_majoritaire",
-    ]
-    display_cols = [c for c in display_cols if c in neighbors.columns]
+        "nb_lignes",
+        "score",
+    ] if c in neighbors.columns]
     neighbors_display = neighbors[display_cols].copy()
-    neighbors_display["score"] = neighbors_display["score"].round(3)
+    if "score" in neighbors_display.columns:
+        neighbors_display["score"] = neighbors_display["score"].round(3)
+    neighbors_display = neighbors_display.rename(columns={
+        "score": "similarite",
+        "Nature_majoritaire": "Nature (majoritaire)",
+        "Univers_majoritaire": "Univers (majoritaire)",
+        "Vendeur_majoritaire": "Vendeur (majoritaire)",
+        "nb_lignes": "nb lignes",
+    })
+    st.caption(
+        "« similarite » = proximité texte entre ta recherche et le libellé (0 à 1). "
+        "Nature/Univers (majoritaire) = catégorie la plus fréquente pour ce libellé "
+        "(reflète les corrections si tu es sur « Dataset corrigé »)."
+    )
     st.dataframe(neighbors_display, use_container_width=True, hide_index=True, height=520)
 
     st.subheader("Details des lignes du dataset")
     st.caption(
-        "Cette vue reutilise le dataset deja charge en session. Elle ne relance pas les algos. "
-        "Si la source est le dataset purifie, les colonnes corrigees et les attributs extraits sont affichables ici."
+        "Cette vue réutilise le dataset déjà chargé en session (elle ne relance aucun calcul). "
+        "Sur « Dataset corrigé », les colonnes recatégorisées et les attributs extraits sont affichables ici."
     )
 
     neighbor_labels = neighbors["Libelle"].dropna().astype(str).tolist()
@@ -475,23 +502,22 @@ if (_go or query) and query.strip():
 
     if selected_labels:
         detail_rows = df[df["Libelle"].fillna("").astype(str).isin(selected_labels)].copy()
+        # Colonnes mises en avant par défaut : catégories (d'origine + prédites) et attributs.
         preferred_cols = [
             "Cod_cmd",
             "Date",
             "Vendeur",
             "Libelle",
             "Univers",
+            "Univers_predite",
             "Nature",
-            "Nature_originale",
-            "Nature_corrigee",
-            "correction_statut",
-            "correction_score",
+            "Nature_predite",
+            "Nature_Score",
             "couleur_extraite",
             "dim_label",
             "L_cm",
             "l_cm",
             "H_cm",
-            "unite_source",
             "Quantite",
             "Montant_cmd",
             "CA",
@@ -499,7 +525,7 @@ if (_go or query) and query.strip():
         default_cols = [c for c in preferred_cols if c in detail_rows.columns]
         remaining_cols = [c for c in detail_rows.columns if c not in default_cols]
 
-        dc1, dc2, dc3 = st.columns([2, 1, 1])
+        dc1, dc2 = st.columns([3, 1])
         with dc1:
             selected_cols = st.multiselect(
                 "Colonnes a afficher",
@@ -508,15 +534,6 @@ if (_go or query) and query.strip():
             )
         with dc2:
             max_detail_rows = st.slider("Nombre max. de lignes", 50, 5000, 500, step=50)
-        with dc3:
-            only_corrected = st.checkbox(
-                "Seulement lignes corrigees",
-                value=False,
-                disabled=not is_clean_source or "correction_statut" not in detail_rows.columns,
-            )
-
-        if only_corrected and "correction_statut" in detail_rows.columns:
-            detail_rows = detail_rows[detail_rows["correction_statut"].isin(["corrigee", "remplie", "a_revoir"])]
 
         if selected_cols:
             st.dataframe(
