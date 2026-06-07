@@ -1,0 +1,23 @@
+# --- Cœur de l'app (tout fonctionne avec ça : stats, recat TF-IDF, recherche, extraction) ---
+streamlit>=1.30
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.3
+scipy>=1.10
+plotly>=5.18
+pyarrow>=14.0          # lecture/écriture Parquet (export + caches)
+
+# Lecture / écriture de fichiers Excel
+pyxlsb>=1.0            # .xlsb
+openpyxl>=3.1          # .xlsx
+xlsxwriter>=3.1        # export Excel
+
+# Graphe relationnel (page 2) — léger
+pyvis>=0.3
+
+# --- Optionnel : projection sémantique UMAP (page 2), désactivée par défaut ---
+# Sans ces paquets, l'app retombe automatiquement sur TF-IDF + SVD.
+# À installer seulement si APP_USE_SENTENCE_TRANSFORMERS=1 et/ou APP_USE_UMAP=1 :
+#   pip install sentence-transformers umap-learn
+# sentence-transformers>=2.2
+# umap-learn>=0.5

@@ -1,0 +1,601 @@
+Cod_cmd,Libelle,Vendeur,Univers,Nature,Date_cmd,Montant_cmd,Quantite,Prix_transport,Delai_transport
+CMD01000,lampe modèle 7,Vendeur A,Maison,Luminaire,2023-05-21,16.77,2,5.82,10
+CMD01000,boîte de rangement vert modèle 3,Vendeur F,Maison,Rangement,2023-04-12,171.93,3,3.89,13
+CMD01001,grille-pain,Vendeur E,Cuisine,Électroménager,2023-02-17,54.31,4,1.97,5
+CMD01001,lampe frontale vert,Vendeur A,Sport,,2023-10-23,155.15,4,15.89,6
+CMD01002,câble lightning modèle 4,Vendeur B,High-Tech,Téléphonie,2023-07-01,187.59,3,24.74,11
+CMD01002,tapis yoga rouge,Vendeur A,Sport,Fitness,2023-12-17,88.34,5,21.91,6
+CMD01003,souris ergonomique blanc 38 cm,Vendeur D,High-Tech,Informatique,2023-09-13,359.64,4,9.05,3
+CMD01003,gourde isotherme,Vendeur A,Sport,Plein air,2023-02-16,156.98,5,24.9,9
+CMD01004,mug,Vendeur C,Cuisine,Art de la table,2023-01-06,176.73,4,0.08,12
+CMD01004,mug bleu 74 cm,Vendeur E,Cuisine,Art de la table,2023-04-02,367.8,5,8.1,1
+CMD01005,cadre photo,Vendeur E,Maison,Décoration,2023-06-07,307.5,2,16.49,9
+CMD01005,coque silicone,Vendeur F,High-Tech,Téléphonie,2023-09-28,128.13,3,10.95,9
+CMD01006,transat bleu 12 cm modèle 1,Vendeur C,Jardin,Mobilier extérieur,2023-05-07,32.99,2,6.96,8
+CMD01006,tapis souris modèle 2,Vendeur F,High-Tech,Informatique,2023-03-09,175.27,4,10.28,14
+CMD01007,boîte de rangement modèle 4,Vendeur B,Maison,Rangement,2023-12-01,216.83,2,10.55,5
+CMD01007,transat rouge,Vendeur B,Jardin,Mobilier extérieur,2023-02-08,70.69,4,12.03,14
+CMD01008,table jardin modèle 9,Vendeur F,Jardin,Mobilier extérieur,2023-03-26,288.77,2,4.75,4
+CMD01008,étagère blanc 28 cm modèle 2,Vendeur F,Maison,Rangement,2023-10-05,345.42,4,3.0,10
+CMD01009,tapis souris gris modèle 6,Vendeur B,,Informatique,2023-11-01,109.92,2,16.79,5
+CMD01009,gants jardinage 87x36,Vendeur A,,Outillage,2023-02-07,352.31,3,7.12,8
+CMD01010,lampe frontale vert modèle 3,Vendeur C,Sport,Plein air,2023-11-10,50.59,1,18.56,3
+CMD01010,planche à découper 33x31,Vendeur C,Cuisine,Ustensile,2023-11-06,22.41,3,19.28,11
+CMD01011,bouilloire blanc,Vendeur E,Cuisine,Électroménager,2023-08-15,223.25,4,3.19,5
+CMD01011,bouilloire beige,Vendeur B,Cuisine,Électroménager,2023-07-03,346.52,2,22.04,1
+CMD01012,tapis souris modèle 2,Vendeur D,High-Tech,Informatique,2023-06-20,349.51,4,5.56,14
+CMD01012,sécateur bleu 37x118 modèle 9,Vendeur D,Jardin,Outillage,2023-06-06,273.41,5,8.28,1
+CMD01013,cadre photo beige 60 cm,Vendeur E,Maison,Décoration,2023-04-02,50.68,5,4.75,1
+CMD01013,transat modèle 7,Vendeur A,Jardin,Mobilier extérieur,2023-09-24,379.81,3,15.58,11
+CMD01014,boîte de rangement vert modèle 7,Vendeur F,Maison,Rangement,2023-06-03,300.51,2,15.39,5
+CMD01014,transat 192x47,Vendeur F,Jardin,Mobilier extérieur,2023-06-05,72.03,1,7.09,11
+CMD01015,lampe frontale bleu 141x98,Vendeur A,Sport,Plein air,2023-02-17,184.89,5,4.86,12
+CMD01015,sécateur,Vendeur D,Jardin,Outillage,2023-07-24,91.44,5,11.61,9
+CMD01016,barre de son,Vendeur D,High-Tech,Audio,2023-08-22,247.0,5,10.67,9
+CMD01016,transat modèle 2,Vendeur F,Jardin,Mobilier extérieur,2023-09-01,117.86,3,8.4,9
+CMD01017,suspension beige 35x46,Vendeur D,Maison,Luminaire,2023-03-19,362.41,5,23.65,1
+CMD01017,sac à dos rando,Vendeur F,,Plein air,2023-09-02,295.18,5,22.45,8
+CMD01018,câble lightning 139x36,Vendeur E,High-Tech,Téléphonie,2023-08-12,15.65,4,14.8,11
+CMD01018,suspension beige 106x117,Vendeur C,Maison,Luminaire,2023-11-26,302.04,4,6.31,2
+CMD01019,chaise pliante,Vendeur A,Jardin,Mobilier extérieur,2023-10-04,380.1,2,20.98,10
+CMD01019,casque bluetooth vert modèle 2,Vendeur B,High-Tech,Audio,2023-03-06,386.06,1,14.47,5
+CMD01020,lampe frontale modèle 5,Vendeur F,Sport,Plein air,2023-07-23,242.16,1,19.91,10
+CMD01020,miroir beige modèle 6,Vendeur F,Maison,Décoration,2023-09-30,357.17,4,17.68,7
+CMD01021,tapis souris 80 cm modèle 4,Vendeur A,High-Tech,Informatique,2023-09-25,115.18,4,6.1,8
+CMD01021,gourde isotherme gris,Vendeur E,,Plein air,2023-06-22,281.97,3,13.89,9
+CMD01022,casque bluetooth,Vendeur A,High-Tech,Audio,2023-05-04,41.76,2,10.11,4
+CMD01022,verre à pied gris 98x52 modèle 4,Vendeur C,Cuisine,Art de la table,2023-10-25,52.22,5,23.77,12
+CMD01023,barre de son modèle 2,Vendeur B,High-Tech,Audio,2023-04-21,122.02,3,4.49,1
+CMD01023,haltère 67 cm modèle 1,Vendeur E,,,2023-05-21,117.31,4,11.01,3
+CMD01024,bougie parfumée rouge 43 cm modèle 4,Vendeur A,Maison,,2023-09-02,225.44,4,15.16,13
+CMD01024,haltère,Vendeur E,Sport,Fitness,2023-09-25,28.79,1,23.69,4
+CMD01025,câble lightning rouge 65 cm modèle 4,Vendeur C,High-Tech,Téléphonie,2023-12-05,284.25,4,1.78,4
+CMD01025,verre à pied bleu,Vendeur B,Cuisine,Art de la table,2023-10-29,33.21,2,19.82,10
+CMD01026,lampe frontale vert,Vendeur A,Sport,Plein air,2023-08-13,241.22,4,18.36,10
+CMD01026,mixeur plongeant rouge,Vendeur C,Cuisine,Électroménager,2023-02-16,232.62,2,11.76,11
+CMD01027,arrosoir 102x105 modèle 3,Vendeur C,Jardin,Outillage,2023-04-03,167.6,4,7.21,7
+CMD01027,tapis yoga 5 cm,Vendeur E,Sport,Fitness,2023-08-21,187.48,1,4.69,6
+CMD01028,sac à dos rando vert 20 cm modèle 4,Vendeur F,Sport,,2023-11-17,67.56,5,0.34,7
+CMD01028,suspension vert modèle 8,Vendeur D,Maison,Luminaire,2023-02-28,101.27,5,3.62,4
+CMD01029,haltère vert modèle 5,Vendeur E,Sport,Fitness,2023-02-05,234.07,4,21.63,8
+CMD01029,sac à dos rando gris,Vendeur B,Sport,Plein air,2023-06-26,230.86,2,21.4,7
+CMD01030,bougie parfumée,Vendeur B,Maison,Décoration,2023-08-31,200.65,1,3.16,10
+CMD01030,bouilloire 24 cm modèle 5,Vendeur C,Cuisine,Électroménager,2023-08-14,251.19,4,16.25,14
+CMD01031,mug 84 cm modèle 5,Vendeur B,Cuisine,Art de la table,2023-10-01,299.97,4,24.46,13
+CMD01031,cadre photo rouge 57x51,Vendeur E,Maison,Décoration,2023-03-27,274.31,2,4.25,2
+CMD01032,lampe frontale,Vendeur F,Sport,Plein air,2023-11-14,8.71,4,22.53,11
+CMD01032,élastique résistance beige,Vendeur C,Sport,Fitness,2023-02-07,83.69,4,21.33,2
+CMD01033,câble lightning beige 11 cm,Vendeur F,High-Tech,Téléphonie,2023-10-20,201.21,3,19.39,4
+CMD01033,lampe frontale,Vendeur B,Sport,Plein air,2023-04-23,253.16,1,7.72,8
+CMD01034,boîte de rangement beige 158x66,Vendeur C,Maison,Rangement,2023-07-06,333.04,3,22.85,8
+CMD01034,assiette céramique bleu,Vendeur D,Cuisine,Art de la table,2023-06-23,387.07,5,9.14,13
+CMD01035,transat 183x67 modèle 4,Vendeur D,Jardin,Mobilier extérieur,2023-05-16,14.88,5,8.2,10
+CMD01035,tapis souris beige 29x58,Vendeur A,High-Tech,Informatique,2023-02-02,43.39,5,3.39,8
+CMD01036,mug,Vendeur D,Cuisine,Art de la table,2023-12-23,248.18,3,0.82,6
+CMD01036,coque silicone 87 cm,Vendeur D,High-Tech,Téléphonie,2023-08-16,113.97,1,23.73,14
+CMD01037,chaise pliante gris 164x46 modèle 9,Vendeur B,Jardin,Mobilier extérieur,2023-12-06,236.62,2,8.21,3
+CMD01037,tapis yoga blanc 21 cm modèle 4,Vendeur E,Sport,Fitness,2023-05-22,132.89,2,6.63,3
+CMD01038,transat,Vendeur A,Jardin,Mobilier extérieur,2023-02-02,292.26,5,7.54,11
+CMD01038,lampe 175x38 modèle 5,Vendeur E,Maison,Luminaire,2023-09-03,255.07,5,17.8,7
+CMD01039,lampe frontale bleu 57 cm,Vendeur D,Sport,Plein air,2023-08-21,162.5,1,7.81,6
+CMD01039,poêle anti-adhésive 115x36,Vendeur E,Cuisine,Ustensile,2023-03-20,382.87,5,8.24,2
+CMD01040,gants jardinage vert,Vendeur E,Jardin,Outillage,2023-12-07,205.43,2,16.42,4
+CMD01040,vase déco,Vendeur E,Maison,Décoration,2023-10-12,247.36,5,0.66,11
+CMD01041,grille-pain blanc,Vendeur D,Cuisine,Électroménager,2023-04-03,32.49,1,2.29,9
+CMD01041,chargeur usb-c,Vendeur A,High-Tech,Téléphonie,2023-08-03,353.92,2,3.94,10
+CMD01042,boîte de rangement 151x34,Vendeur A,Maison,Rangement,2023-02-11,116.88,5,12.17,11
+CMD01042,bouilloire bleu,Vendeur C,Cuisine,Électroménager,2023-04-23,134.61,1,12.43,7
+CMD01043,barre de son modèle 1,Vendeur D,High-Tech,Audio,2023-07-14,12.4,1,21.55,10
+CMD01043,arrosoir gris 63 cm,Vendeur C,Jardin,Outillage,2023-12-30,39.81,1,6.08,10
+CMD01044,chaise pliante blanc 72 cm,Vendeur C,Jardin,Mobilier extérieur,2023-07-22,143.68,2,5.91,3
+CMD01044,mixeur plongeant 79 cm,Vendeur E,Cuisine,Électroménager,2023-03-30,258.98,5,8.08,11
+CMD01045,grille-pain,Vendeur A,Cuisine,Électroménager,2023-08-14,127.61,4,0.94,6
+CMD01045,mixeur plongeant beige 10 cm,Vendeur E,Cuisine,Électroménager,2023-11-27,262.48,3,15.13,9
+CMD01046,enceinte portable 10 cm modèle 8,Vendeur D,High-Tech,Audio,2023-08-19,212.01,5,3.97,6
+CMD01046,poêle anti-adhésive modèle 2,Vendeur E,Cuisine,Ustensile,2023-07-29,272.96,3,6.3,14
+CMD01047,haltère beige 15 cm,Vendeur D,Sport,Fitness,2023-06-20,259.18,3,20.33,11
+CMD01047,tapis yoga blanc,Vendeur D,Sport,Fitness,2023-11-27,80.84,2,3.87,5
+CMD01048,étagère,Vendeur E,Maison,Rangement,2023-10-04,153.8,2,4.52,12
+CMD01048,élastique résistance,Vendeur D,,Fitness,2023-08-13,97.43,2,7.74,13
+CMD01049,table jardin vert,Vendeur D,Jardin,Mobilier extérieur,2023-07-08,386.68,2,20.03,3
+CMD01049,bouilloire modèle 2,Vendeur B,Cuisine,Électroménager,2023-11-25,112.75,5,3.68,7
+CMD01050,lampadaire gris 52 cm modèle 6,Vendeur A,Maison,Luminaire,2023-08-19,336.47,3,19.78,3
+CMD01050,bougie parfumée rouge modèle 4,Vendeur B,Maison,Décoration,2023-08-30,221.78,5,13.19,2
+CMD01051,mixeur plongeant 147x96,Vendeur F,Cuisine,Électroménager,2023-06-04,208.57,2,17.96,5
+CMD01051,chaise pliante 13 cm,Vendeur E,Jardin,Mobilier extérieur,2023-11-11,205.39,5,13.85,7
+CMD01052,transat noir 85 cm modèle 6,Vendeur B,Jardin,Mobilier extérieur,2023-11-22,22.51,5,8.46,11
+CMD01052,clavier sans fil 63 cm modèle 4,Vendeur A,High-Tech,Informatique,2023-08-26,317.49,1,7.89,5
+CMD01053,lampe frontale gris modèle 6,Vendeur C,Sport,,2023-10-06,54.17,3,10.92,7
+CMD01053,arrosoir vert,Vendeur A,Jardin,Outillage,2023-06-23,175.09,2,13.64,6
+CMD01054,lampadaire 110x98,Vendeur C,Maison,Luminaire,2023-06-17,257.59,1,1.88,11
+CMD01054,sécateur 185x66,Vendeur E,Jardin,Outillage,2023-09-20,17.79,2,16.98,6
+CMD01055,set couteaux vert 67x83,Vendeur E,Cuisine,Ustensile,2023-02-09,51.52,3,17.6,4
+CMD01055,gourde isotherme noir 61 cm,Vendeur F,Sport,Plein air,2023-12-22,387.19,3,16.7,12
+CMD01056,étagère,Vendeur C,Maison,Rangement,2023-10-05,205.96,1,24.63,13
+CMD01056,enceinte portable blanc modèle 5,Vendeur D,,Audio,2023-09-10,399.84,4,13.14,13
+CMD01057,table jardin gris 75 cm,Vendeur B,Jardin,Mobilier extérieur,2023-03-06,308.27,2,10.82,14
+CMD01057,applique murale 71 cm,Vendeur A,Maison,Luminaire,2023-09-23,103.99,5,6.86,11
+CMD01058,mug 82 cm,Vendeur E,Cuisine,Art de la table,2023-10-01,21.27,1,2.03,11
+CMD01058,lampe frontale 42 cm,Vendeur C,Sport,Plein air,2023-11-30,195.76,4,7.44,2
+CMD01059,applique murale 49 cm,Vendeur B,Maison,Luminaire,2023-08-14,305.46,5,14.04,6
+CMD01059,coque silicone beige,Vendeur B,High-Tech,Téléphonie,2023-03-04,326.32,5,18.03,4
+CMD01060,chargeur usb-c beige,Vendeur B,High-Tech,Téléphonie,2023-09-21,235.42,1,1.26,8
+CMD01060,sac à dos rando vert,Vendeur C,Sport,Plein air,2023-05-27,22.87,1,14.26,4
+CMD01061,mug noir 115x63,Vendeur C,Cuisine,Art de la table,2023-05-28,303.21,2,15.06,7
+CMD01061,haltère blanc,Vendeur C,,Fitness,2023-01-24,372.89,3,4.06,10
+CMD01062,verre à pied 52 cm,Vendeur A,Cuisine,Art de la table,2023-06-22,392.06,5,7.69,12
+CMD01062,panier osier rouge modèle 7,Vendeur B,Maison,Rangement,2023-08-31,329.56,2,0.79,12
+CMD01063,lampadaire 65 cm,Vendeur F,Maison,Luminaire,2023-01-10,292.32,2,12.97,9
+CMD01063,assiette céramique gris,Vendeur F,Cuisine,Art de la table,2023-09-02,273.89,3,15.25,4
+CMD01064,chargeur usb-c,Vendeur D,High-Tech,Téléphonie,2023-10-13,130.23,3,14.01,13
+CMD01064,set couteaux,Vendeur C,Cuisine,Ustensile,2023-03-04,21.62,1,8.66,8
+CMD01065,verre à pied modèle 4,Vendeur B,Cuisine,Art de la table,2023-09-03,25.05,5,5.64,4
+CMD01065,suspension blanc 65 cm,Vendeur B,Maison,Luminaire,2023-07-31,303.58,3,8.03,11
+CMD01066,lampe 27 cm,Vendeur A,Maison,Luminaire,2023-11-30,398.88,4,19.7,3
+CMD01066,grille-pain modèle 9,Vendeur D,Cuisine,Électroménager,2023-01-05,112.77,1,8.27,12
+CMD01067,arrosoir bleu 56 cm,Vendeur E,,Outillage,2023-04-06,134.53,4,16.73,3
+CMD01067,chargeur usb-c vert,Vendeur F,High-Tech,,2023-06-15,231.29,3,16.34,12
+CMD01068,enceinte portable,Vendeur C,High-Tech,Audio,2023-12-08,277.66,3,9.19,4
+CMD01068,barre de son,Vendeur B,High-Tech,Audio,2023-09-02,305.93,5,21.83,2
+CMD01069,lampe frontale bleu modèle 6,Vendeur E,Sport,Plein air,2023-09-28,179.53,2,17.92,8
+CMD01069,panier osier rouge,Vendeur C,Maison,Rangement,2023-08-17,290.7,4,6.36,1
+CMD01070,clavier sans fil rouge modèle 8,Vendeur A,,Informatique,2023-02-07,118.4,2,19.22,13
+CMD01070,arrosoir blanc,Vendeur B,Jardin,Outillage,2023-07-15,397.17,4,13.22,12
+CMD01071,barre de son beige modèle 6,Vendeur B,High-Tech,Audio,2023-01-12,113.88,1,0.81,11
+CMD01071,chaise pliante rouge 132x49,Vendeur A,Jardin,Mobilier extérieur,2023-05-04,60.35,3,5.85,12
+CMD01072,sac à dos rando blanc,Vendeur D,Sport,Plein air,2023-10-23,123.7,1,13.92,10
+CMD01072,souris ergonomique,Vendeur C,High-Tech,Informatique,2023-12-14,280.04,4,3.73,7
+CMD01073,tapis souris,Vendeur D,High-Tech,Informatique,2023-08-31,225.13,2,9.71,5
+CMD01073,chargeur usb-c bleu 174x97 modèle 2,Vendeur B,High-Tech,Téléphonie,2023-11-28,322.84,5,18.11,9
+CMD01074,coque silicone bleu modèle 8,Vendeur B,High-Tech,Téléphonie,2023-04-17,279.77,2,9.92,4
+CMD01074,sac à dos rando gris,Vendeur A,Sport,Plein air,2023-05-25,322.11,4,19.04,6
+CMD01075,coque silicone 79 cm,Vendeur D,High-Tech,Téléphonie,2023-06-10,121.6,2,8.25,7
+CMD01075,haltère,Vendeur D,Sport,Fitness,2023-09-13,187.03,3,4.23,12
+CMD01076,lampe frontale,Vendeur A,Sport,Plein air,2023-04-05,378.35,1,19.11,7
+CMD01076,clavier sans fil gris 83 cm,Vendeur F,High-Tech,Informatique,2023-04-29,197.7,1,13.31,7
+CMD01077,applique murale beige,Vendeur A,Maison,Luminaire,2023-09-29,367.63,5,3.72,4
+CMD01077,sac à dos rando 198x48 modèle 2,Vendeur F,Sport,Plein air,2023-07-01,396.71,1,2.34,7
+CMD01078,sécateur beige,Vendeur A,Jardin,Outillage,2023-01-29,358.44,1,5.74,14
+CMD01078,sac à dos rando modèle 6,Vendeur A,,Plein air,2023-05-19,384.78,5,3.6,14
+CMD01079,table jardin,Vendeur F,Jardin,Mobilier extérieur,2023-06-03,60.28,1,12.52,6
+CMD01079,lampadaire 62 cm,Vendeur C,Maison,Luminaire,2023-08-12,223.45,4,10.8,11
+CMD01080,gourde isotherme 182x39,Vendeur C,Sport,Plein air,2023-02-13,147.48,1,0.13,5
+CMD01080,arrosoir beige 161x31,Vendeur C,Jardin,Outillage,2023-05-19,346.17,1,7.3,7
+CMD01081,panier osier beige 88x83 modèle 3,Vendeur D,Maison,Rangement,2023-10-14,114.0,3,12.11,2
+CMD01081,planche à découper noir 121x62,Vendeur D,Cuisine,Ustensile,2023-05-07,322.61,3,11.01,7
+CMD01082,tapis yoga blanc,Vendeur C,Sport,Fitness,2023-06-03,295.28,4,24.19,13
+CMD01082,chargeur usb-c bleu,Vendeur F,High-Tech,Téléphonie,2023-07-12,308.21,1,23.83,8
+CMD01083,chargeur usb-c 84x104 modèle 7,Vendeur D,High-Tech,,2023-05-30,34.22,5,11.98,7
+CMD01083,lampe frontale,Vendeur A,,Plein air,2023-10-06,48.2,2,16.44,6
+CMD01084,tapis souris,Vendeur D,,Informatique,2023-11-10,46.85,1,6.47,9
+CMD01084,élastique résistance blanc 46x57,Vendeur A,Sport,Fitness,2023-08-17,50.85,2,8.71,6
+CMD01085,table jardin 31x110 modèle 6,Vendeur F,Jardin,Mobilier extérieur,2023-09-24,48.2,2,23.25,12
+CMD01085,souris ergonomique 67x43,Vendeur D,High-Tech,Informatique,2023-03-31,161.26,5,22.08,8
+CMD01086,sac à dos rando modèle 2,Vendeur E,,Plein air,2023-07-19,78.85,3,4.93,2
+CMD01086,mug beige,Vendeur D,Cuisine,Art de la table,2023-09-08,248.86,3,22.97,10
+CMD01087,étagère blanc,Vendeur B,Maison,Rangement,2023-03-10,232.05,4,4.64,11
+CMD01087,tapis yoga,Vendeur A,Sport,Fitness,2023-10-12,196.42,2,20.38,9
+CMD01088,sac à dos rando noir,Vendeur B,Sport,Plein air,2023-07-29,120.38,3,5.62,5
+CMD01088,câble lightning noir 51 cm,Vendeur A,High-Tech,Téléphonie,2023-10-17,305.2,4,13.66,7
+CMD01089,étagère gris modèle 2,Vendeur B,Maison,Rangement,2023-12-01,87.9,5,17.23,14
+CMD01089,gourde isotherme,Vendeur E,Sport,Plein air,2023-03-26,217.81,3,24.48,5
+CMD01090,mug 57 cm,Vendeur C,Cuisine,Art de la table,2023-05-17,347.48,2,17.54,3
+CMD01090,barre de son blanc modèle 7,Vendeur D,High-Tech,Audio,2023-12-31,183.54,1,10.07,12
+CMD01091,mug noir,Vendeur F,Cuisine,Art de la table,2023-07-08,280.43,1,19.89,7
+CMD01091,chargeur usb-c blanc,Vendeur C,High-Tech,Téléphonie,2023-04-19,358.19,1,1.15,11
+CMD01092,table jardin beige 21 cm,Vendeur C,Jardin,Mobilier extérieur,2023-03-05,67.8,3,2.33,6
+CMD01092,bouilloire vert,Vendeur D,Cuisine,Électroménager,2023-07-10,263.92,1,0.03,8
+CMD01093,lampe gris,Vendeur D,Maison,Luminaire,2023-10-31,279.14,4,1.77,7
+CMD01093,boîte de rangement blanc,Vendeur A,Maison,Rangement,2023-02-22,214.55,1,15.26,3
+CMD01094,arrosoir 45x37,Vendeur E,Jardin,Outillage,2023-04-20,293.35,3,24.08,6
+CMD01094,barre de son,Vendeur F,High-Tech,Audio,2023-05-22,15.6,3,5.14,10
+CMD01095,tapis yoga noir 14 cm,Vendeur A,Sport,,2023-07-20,394.82,3,3.3,14
+CMD01095,sac à dos rando modèle 2,Vendeur A,Sport,Plein air,2023-07-07,108.56,1,23.06,13
+CMD01096,arrosoir 83 cm modèle 2,Vendeur C,Jardin,Outillage,2023-11-18,36.21,2,24.36,3
+CMD01096,lampe frontale 35 cm modèle 2,Vendeur D,Sport,Plein air,2023-07-20,50.81,5,15.22,5
+CMD01097,casque bluetooth gris,Vendeur F,High-Tech,Audio,2023-01-07,107.4,3,3.17,13
+CMD01097,verre à pied noir 85 cm modèle 8,Vendeur E,Cuisine,,2023-03-02,147.25,4,21.48,3
+CMD01098,mixeur plongeant 10 cm,Vendeur A,Cuisine,Électroménager,2023-05-11,101.6,4,9.1,3
+CMD01098,barre de son gris 45 cm modèle 2,Vendeur E,High-Tech,Audio,2023-10-11,152.26,5,16.83,1
+CMD01099,casque bluetooth,Vendeur C,High-Tech,Audio,2023-09-22,134.28,5,11.42,6
+CMD01099,coque silicone,Vendeur F,High-Tech,Téléphonie,2023-10-16,360.68,2,3.76,7
+CMD01100,lampe 44 cm modèle 9,Vendeur B,Maison,Luminaire,2023-10-05,170.83,1,24.31,3
+CMD01100,mixeur plongeant gris 79 cm modèle 3,Vendeur F,Cuisine,Électroménager,2023-01-23,328.89,1,14.8,1
+CMD01101,table jardin,Vendeur C,Jardin,Mobilier extérieur,2023-05-02,97.28,2,3.4,13
+CMD01101,haltère gris modèle 5,Vendeur D,Sport,Fitness,2023-03-21,109.68,1,2.26,13
+CMD01102,verre à pied bleu,Vendeur A,Cuisine,Art de la table,2023-12-23,272.49,3,20.5,3
+CMD01102,cadre photo blanc 76x36 modèle 7,Vendeur C,Maison,Décoration,2023-08-20,276.08,1,14.56,5
+CMD01103,suspension gris 11 cm modèle 7,Vendeur F,Maison,Luminaire,2023-02-03,161.02,1,9.57,7
+CMD01103,chargeur usb-c 36 cm,Vendeur D,High-Tech,Téléphonie,2023-04-20,167.74,5,11.98,2
+CMD01104,planche à découper rouge,Vendeur C,Cuisine,Ustensile,2023-03-12,194.48,4,8.6,10
+CMD01104,lampe frontale vert 72 cm,Vendeur E,Sport,,2023-07-18,399.84,2,2.5,11
+CMD01105,coque silicone,Vendeur D,High-Tech,Téléphonie,2023-10-01,145.15,2,4.4,10
+CMD01105,mug,Vendeur E,Cuisine,Art de la table,2023-12-24,379.61,4,13.55,3
+CMD01106,chaise pliante rouge 21 cm,Vendeur B,Jardin,Mobilier extérieur,2023-02-16,367.92,3,1.49,3
+CMD01106,tapis yoga beige,Vendeur C,Sport,Fitness,2023-02-26,58.9,2,18.31,7
+CMD01107,gants jardinage 27 cm,Vendeur F,Jardin,Outillage,2023-03-31,276.96,2,4.44,1
+CMD01107,lampe frontale noir modèle 2,Vendeur B,,Plein air,2023-10-18,141.99,3,4.2,2
+CMD01108,poêle anti-adhésive noir modèle 8,Vendeur F,Cuisine,Ustensile,2023-01-06,170.76,2,22.11,8
+CMD01108,gants jardinage modèle 2,Vendeur A,Jardin,Outillage,2023-10-07,121.49,3,6.53,2
+CMD01109,cadre photo noir 66 cm,Vendeur D,Maison,Décoration,2023-03-29,377.26,2,15.18,7
+CMD01109,enceinte portable,Vendeur C,High-Tech,Audio,2023-02-21,265.94,3,5.94,1
+CMD01110,sécateur 63x101 modèle 2,Vendeur D,Jardin,,2023-03-20,338.29,3,19.62,8
+CMD01110,arrosoir 87x76,Vendeur B,Jardin,Outillage,2023-02-16,335.65,5,1.54,13
+CMD01111,suspension beige,Vendeur E,Maison,Luminaire,2023-12-09,276.39,4,14.32,4
+CMD01111,sécateur blanc 27 cm,Vendeur B,Jardin,Outillage,2023-02-10,389.01,2,3.15,7
+CMD01112,étagère 13 cm modèle 9,Vendeur D,Maison,Rangement,2023-08-11,223.06,3,12.99,14
+CMD01112,étagère blanc,Vendeur A,Maison,Rangement,2023-11-16,370.35,5,19.49,13
+CMD01113,mug 56x99,Vendeur F,Cuisine,Art de la table,2023-06-26,163.68,4,22.24,6
+CMD01113,casque bluetooth vert 17 cm,Vendeur B,High-Tech,Audio,2023-09-01,58.08,4,19.35,6
+CMD01114,verre à pied beige,Vendeur C,Cuisine,Art de la table,2023-08-02,329.3,5,19.79,2
+CMD01114,mug 71x27 modèle 8,Vendeur A,Cuisine,Art de la table,2023-09-17,367.62,2,6.85,14
+CMD01115,sécateur 80 cm,Vendeur C,Jardin,Outillage,2023-11-22,69.59,3,18.72,12
+CMD01115,vase déco,Vendeur C,Maison,Décoration,2023-01-15,262.38,5,0.5,13
+CMD01116,cadre photo vert,Vendeur C,Maison,Décoration,2023-03-09,172.4,4,21.29,8
+CMD01116,mixeur plongeant noir 52 cm,Vendeur E,Cuisine,Électroménager,2023-08-27,245.57,3,17.11,8
+CMD01117,miroir,Vendeur B,Maison,Décoration,2023-05-22,64.22,2,22.49,13
+CMD01117,gourde isotherme modèle 7,Vendeur D,Sport,Plein air,2023-12-05,158.37,1,14.58,10
+CMD01118,chargeur usb-c,Vendeur B,High-Tech,Téléphonie,2023-04-24,337.05,5,4.53,2
+CMD01118,chaise pliante,Vendeur B,Jardin,Mobilier extérieur,2023-05-13,145.34,3,10.51,6
+CMD01119,set couteaux noir 50x107,Vendeur C,Cuisine,Ustensile,2023-10-27,168.18,2,3.43,4
+CMD01119,poêle anti-adhésive blanc,Vendeur F,Cuisine,Ustensile,2023-10-19,394.72,3,15.86,1
+CMD01120,sécateur noir 129x71,Vendeur D,Jardin,Outillage,2023-04-18,156.41,1,13.34,12
+CMD01120,bouilloire modèle 6,Vendeur C,Cuisine,Électroménager,2023-06-14,55.93,4,12.58,5
+CMD01121,barre de son gris 22 cm,Vendeur D,High-Tech,Audio,2023-01-24,146.9,2,4.12,13
+CMD01121,chaise pliante modèle 6,Vendeur F,Jardin,Mobilier extérieur,2023-04-27,261.96,1,9.38,11
+CMD01122,mug rouge 133x68 modèle 5,Vendeur D,,Art de la table,2023-11-16,282.24,2,17.38,11
+CMD01122,miroir,Vendeur A,Maison,Décoration,2023-08-04,207.08,5,2.94,2
+CMD01123,vase déco beige 147x46,Vendeur D,Maison,Décoration,2023-04-12,135.59,1,0.32,2
+CMD01123,panier osier noir,Vendeur D,Maison,Rangement,2023-12-09,395.52,3,6.6,1
+CMD01124,applique murale noir 10 cm modèle 3,Vendeur F,Maison,Luminaire,2023-01-21,260.64,3,8.94,8
+CMD01124,gourde isotherme 142x73,Vendeur B,Sport,Plein air,2023-02-17,49.66,1,24.54,14
+CMD01125,barre de son 111x98 modèle 3,Vendeur D,High-Tech,Audio,2023-08-02,368.56,1,22.19,8
+CMD01125,suspension,Vendeur E,Maison,,2023-05-14,276.86,5,2.38,11
+CMD01126,coque silicone,Vendeur A,High-Tech,Téléphonie,2023-06-27,9.6,2,12.64,8
+CMD01126,table jardin 184x68,Vendeur B,Jardin,Mobilier extérieur,2023-02-08,36.14,4,20.03,8
+CMD01127,cadre photo beige 16 cm,Vendeur E,Maison,Décoration,2023-08-17,256.83,5,14.06,11
+CMD01127,arrosoir,Vendeur D,Jardin,Outillage,2023-07-06,50.04,2,0.05,6
+CMD01128,assiette céramique beige 29 cm modèle 7,Vendeur B,Cuisine,Art de la table,2023-09-25,185.53,2,17.92,2
+CMD01128,table jardin blanc modèle 1,Vendeur E,Jardin,Mobilier extérieur,2023-11-21,374.45,5,12.07,9
+CMD01129,clavier sans fil gris,Vendeur E,High-Tech,Informatique,2023-10-24,366.78,2,6.84,6
+CMD01129,planche à découper gris,Vendeur F,Cuisine,Ustensile,2023-03-10,90.85,2,15.6,5
+CMD01130,assiette céramique gris,Vendeur E,Cuisine,Art de la table,2023-03-09,194.75,5,23.57,12
+CMD01130,sécateur rouge modèle 3,Vendeur C,Jardin,Outillage,2023-08-05,274.94,2,20.98,12
+CMD01131,bouilloire,Vendeur B,,Électroménager,2023-10-05,298.25,5,9.72,9
+CMD01131,verre à pied,Vendeur E,,Art de la table,2023-12-07,26.25,3,5.08,14
+CMD01132,transat bleu,Vendeur C,Jardin,Mobilier extérieur,2023-11-21,182.28,1,4.67,3
+CMD01132,haltère vert 59x25 modèle 6,Vendeur E,,Fitness,2023-07-13,25.09,5,21.08,5
+CMD01133,sécateur,Vendeur B,Jardin,Outillage,2023-02-07,169.29,5,10.09,6
+CMD01133,casque bluetooth,Vendeur E,High-Tech,Audio,2023-12-06,330.36,1,2.87,6
+CMD01134,chaise pliante 19 cm,Vendeur E,Jardin,Mobilier extérieur,2023-11-25,290.97,1,22.78,14
+CMD01134,mug noir modèle 9,Vendeur E,Cuisine,,2023-09-18,7.9,1,5.27,11
+CMD01135,tapis souris,Vendeur A,High-Tech,Informatique,2023-08-06,300.02,2,0.59,12
+CMD01135,grille-pain bleu,Vendeur D,Cuisine,Électroménager,2023-02-14,253.94,4,7.91,7
+CMD01136,panier osier noir 42 cm,Vendeur C,Maison,Rangement,2023-01-04,244.59,3,19.13,8
+CMD01136,sécateur beige,Vendeur C,,Outillage,2023-12-05,384.25,2,7.45,13
+CMD01137,bouilloire beige,Vendeur C,Cuisine,Électroménager,2023-10-11,87.97,3,5.29,11
+CMD01137,haltère blanc,Vendeur A,Sport,Fitness,2023-03-24,341.3,5,11.53,9
+CMD01138,bougie parfumée 35 cm modèle 2,Vendeur B,Maison,Décoration,2023-12-10,130.53,4,8.21,11
+CMD01138,verre à pied 76x111,Vendeur D,Cuisine,Art de la table,2023-10-27,114.29,3,3.36,12
+CMD01139,set couteaux blanc modèle 5,Vendeur B,Cuisine,Ustensile,2023-08-25,357.06,2,6.58,11
+CMD01139,panier osier beige modèle 1,Vendeur E,Maison,Rangement,2023-02-08,107.94,5,11.8,13
+CMD01140,câble lightning 16 cm,Vendeur E,High-Tech,Téléphonie,2023-07-20,9.18,2,21.2,13
+CMD01140,élastique résistance,Vendeur F,Sport,Fitness,2023-09-21,294.14,3,1.01,13
+CMD01141,transat gris 10 cm modèle 6,Vendeur A,Jardin,Mobilier extérieur,2023-02-02,282.98,5,15.84,5
+CMD01141,verre à pied noir,Vendeur B,Cuisine,Art de la table,2023-10-06,208.97,3,20.43,6
+CMD01142,arrosoir noir modèle 3,Vendeur B,,Outillage,2023-11-06,67.16,5,17.93,2
+CMD01142,chargeur usb-c blanc,Vendeur B,High-Tech,Téléphonie,2023-06-19,22.04,5,14.81,3
+CMD01143,tapis yoga beige,Vendeur A,Sport,Fitness,2023-10-21,352.01,3,23.68,4
+CMD01143,gants jardinage blanc,Vendeur B,Jardin,Outillage,2023-09-04,291.05,3,23.06,10
+CMD01144,tapis yoga beige,Vendeur B,Sport,Fitness,2023-04-28,192.97,5,15.0,13
+CMD01144,élastique résistance rouge,Vendeur F,Sport,Fitness,2023-02-17,175.44,4,9.26,1
+CMD01145,sac à dos rando noir 79x30 modèle 9,Vendeur D,Sport,Plein air,2023-04-28,106.83,1,17.73,13
+CMD01145,panier osier gris 129x103,Vendeur C,Maison,,2023-09-25,342.72,4,14.12,10
+CMD01146,mug gris,Vendeur C,Cuisine,Art de la table,2023-07-23,233.17,4,18.39,14
+CMD01146,étagère beige,Vendeur E,Maison,Rangement,2023-04-28,280.34,1,4.02,11
+CMD01147,lampe bleu 54 cm,Vendeur D,Maison,Luminaire,2023-03-16,247.52,5,7.16,10
+CMD01147,applique murale bleu,Vendeur C,Maison,,2023-11-24,99.51,1,24.39,2
+CMD01148,poêle anti-adhésive noir,Vendeur F,Cuisine,Ustensile,2023-06-30,332.76,5,8.7,14
+CMD01148,grille-pain vert 76 cm modèle 5,Vendeur C,Cuisine,Électroménager,2023-11-07,379.07,5,23.92,9
+CMD01149,sac à dos rando,Vendeur D,Sport,Plein air,2023-12-22,274.23,5,21.55,8
+CMD01149,vase déco 110x86,Vendeur F,Maison,Décoration,2023-02-04,333.71,2,7.18,7
+CMD01150,grille-pain vert 29 cm,Vendeur B,Cuisine,Électroménager,2023-10-11,97.77,2,21.82,4
+CMD01150,casque bluetooth noir,Vendeur E,High-Tech,Audio,2023-05-08,7.62,5,23.95,14
+CMD01151,gants jardinage 70 cm modèle 4,Vendeur E,Jardin,Outillage,2023-11-14,55.66,5,19.98,8
+CMD01151,tapis yoga noir,Vendeur F,Sport,Fitness,2023-09-15,8.33,2,9.49,2
+CMD01152,set couteaux,Vendeur B,Cuisine,Ustensile,2023-11-10,202.01,2,10.48,13
+CMD01152,poêle anti-adhésive,Vendeur F,Cuisine,Ustensile,2023-07-25,111.63,2,13.88,14
+CMD01153,table jardin 181x86,Vendeur C,Jardin,Mobilier extérieur,2023-03-16,315.21,3,6.27,14
+CMD01153,tapis yoga 62 cm,Vendeur C,Sport,Fitness,2023-07-23,147.58,5,13.94,13
+CMD01154,planche à découper 88 cm,Vendeur C,Cuisine,Ustensile,2023-01-11,145.27,5,12.19,12
+CMD01154,chaise pliante,Vendeur D,Jardin,Mobilier extérieur,2023-07-15,254.35,5,10.12,2
+CMD01155,applique murale,Vendeur D,Maison,Luminaire,2023-06-25,313.48,3,18.7,9
+CMD01155,gants jardinage vert,Vendeur A,Jardin,,2023-03-27,88.18,4,2.58,2
+CMD01156,chaise pliante blanc 54 cm,Vendeur B,Jardin,Mobilier extérieur,2023-01-14,296.35,4,15.66,3
+CMD01156,haltère 39 cm,Vendeur B,,Fitness,2023-01-15,387.97,5,4.43,10
+CMD01157,arrosoir bleu,Vendeur C,Jardin,Outillage,2023-09-26,167.82,2,7.59,1
+CMD01157,élastique résistance,Vendeur A,Sport,Fitness,2023-06-26,307.52,3,14.93,13
+CMD01158,boîte de rangement blanc,Vendeur D,Maison,Rangement,2023-07-11,92.13,1,10.56,4
+CMD01158,sac à dos rando noir 183x78,Vendeur C,Sport,Plein air,2023-05-26,281.69,4,4.69,1
+CMD01159,enceinte portable modèle 3,Vendeur A,,Audio,2023-10-01,199.96,3,10.51,13
+CMD01159,sécateur modèle 7,Vendeur A,Jardin,,2023-08-26,219.56,2,4.8,14
+CMD01160,poêle anti-adhésive 30 cm,Vendeur A,Cuisine,Ustensile,2023-01-07,210.85,2,11.82,11
+CMD01160,planche à découper vert 112x26,Vendeur B,Cuisine,,2023-03-23,389.44,2,15.82,6
+CMD01161,suspension rouge,Vendeur F,Maison,Luminaire,2023-05-22,240.5,3,19.27,4
+CMD01161,câble lightning gris,Vendeur A,High-Tech,Téléphonie,2023-02-16,54.7,2,7.92,9
+CMD01162,planche à découper rouge 95x89,Vendeur B,,Ustensile,2023-04-09,228.85,5,8.69,12
+CMD01162,sécateur 113x78 modèle 9,Vendeur D,Jardin,Outillage,2023-11-03,294.79,1,15.49,6
+CMD01163,élastique résistance 75 cm modèle 5,Vendeur C,Sport,Fitness,2023-06-14,166.87,3,2.76,9
+CMD01163,lampe noir 54 cm,Vendeur E,Maison,,2023-03-08,251.47,5,6.4,6
+CMD01164,tapis souris noir 51 cm,Vendeur D,,Informatique,2023-02-06,329.7,1,20.59,5
+CMD01164,tapis yoga 73 cm,Vendeur B,Sport,Fitness,2023-02-06,212.85,2,14.25,3
+CMD01165,lampe frontale beige modèle 3,Vendeur E,Sport,Plein air,2023-02-24,163.62,3,16.44,9
+CMD01165,sac à dos rando 46 cm,Vendeur E,Sport,Plein air,2023-06-30,220.52,4,19.14,12
+CMD01166,planche à découper vert,Vendeur C,Cuisine,Ustensile,2023-08-20,7.59,2,5.37,6
+CMD01166,panier osier 111x39 modèle 6,Vendeur E,Maison,Rangement,2023-05-22,103.69,3,20.28,2
+CMD01167,lampe frontale 78 cm,Vendeur A,Sport,Plein air,2023-10-19,240.12,3,0.93,13
+CMD01167,sac à dos rando beige 34 cm,Vendeur E,Sport,Plein air,2023-02-10,371.82,4,1.35,9
+CMD01168,vase déco beige,Vendeur E,Maison,Décoration,2023-10-04,204.37,2,10.8,13
+CMD01168,transat beige 131x119,Vendeur B,Jardin,Mobilier extérieur,2023-03-09,194.96,2,12.2,11
+CMD01169,tapis yoga vert,Vendeur E,Sport,Fitness,2023-10-15,40.39,4,10.59,6
+CMD01169,chargeur usb-c gris,Vendeur D,High-Tech,,2023-06-26,251.16,4,1.12,14
+CMD01170,casque bluetooth rouge 23 cm,Vendeur C,High-Tech,Audio,2023-12-17,10.42,1,7.63,8
+CMD01170,miroir blanc,Vendeur D,Maison,Décoration,2023-04-18,235.29,5,1.09,3
+CMD01171,cadre photo rouge 89 cm,Vendeur F,Maison,Décoration,2023-04-13,147.29,1,0.48,14
+CMD01171,table jardin noir 63 cm,Vendeur F,Jardin,Mobilier extérieur,2023-07-14,13.49,2,23.06,5
+CMD01172,planche à découper vert 69 cm modèle 1,Vendeur F,Cuisine,,2023-07-21,106.78,4,22.26,14
+CMD01172,boîte de rangement 193x98,Vendeur F,Maison,Rangement,2023-05-24,94.83,2,14.32,7
+CMD01173,mug bleu,Vendeur F,Cuisine,Art de la table,2023-06-18,359.96,2,10.75,13
+CMD01173,tapis souris noir 23 cm,Vendeur C,High-Tech,Informatique,2023-10-17,352.65,4,24.03,5
+CMD01174,sécateur vert,Vendeur E,Jardin,Outillage,2023-03-19,96.71,1,8.98,12
+CMD01174,transat beige 69x48 modèle 1,Vendeur C,Jardin,Mobilier extérieur,2023-09-15,380.33,2,18.56,4
+CMD01175,barre de son gris,Vendeur D,High-Tech,Audio,2023-04-01,164.92,1,15.2,14
+CMD01175,gants jardinage rouge,Vendeur A,Jardin,Outillage,2023-07-21,351.72,2,12.97,7
+CMD01176,étagère 93x79 modèle 5,Vendeur E,Maison,Rangement,2023-07-18,368.02,5,22.59,8
+CMD01176,transat beige 65x78,Vendeur F,Jardin,Mobilier extérieur,2023-09-14,358.84,4,2.25,6
+CMD01177,tapis souris beige,Vendeur E,High-Tech,Informatique,2023-03-05,380.15,4,13.76,1
+CMD01177,coque silicone 58 cm,Vendeur F,High-Tech,Téléphonie,2023-10-17,308.61,4,7.22,3
+CMD01178,lampe modèle 8,Vendeur B,,Luminaire,2023-04-14,90.67,4,11.34,8
+CMD01178,boîte de rangement,Vendeur A,,Rangement,2023-11-04,78.01,1,16.33,1
+CMD01179,enceinte portable 65x40,Vendeur E,High-Tech,Audio,2023-12-08,266.07,5,14.31,9
+CMD01179,chargeur usb-c beige,Vendeur E,High-Tech,,2023-10-24,30.65,4,3.36,12
+CMD01180,poêle anti-adhésive 85 cm,Vendeur A,Cuisine,Ustensile,2023-09-27,196.05,5,23.35,12
+CMD01180,planche à découper 164x83,Vendeur F,Cuisine,Ustensile,2023-11-08,201.61,2,22.09,4
+CMD01181,bouilloire 58 cm,Vendeur C,Cuisine,Électroménager,2023-01-01,143.11,2,0.28,4
+CMD01181,set couteaux 121x112,Vendeur A,Cuisine,Ustensile,2023-02-04,333.66,2,8.26,6
+CMD01182,gants jardinage gris 12 cm,Vendeur C,Jardin,Outillage,2023-01-19,228.15,3,13.88,1
+CMD01182,souris ergonomique blanc 116x100,Vendeur B,High-Tech,Informatique,2023-12-17,230.54,4,4.68,2
+CMD01183,assiette céramique bleu 43 cm modèle 5,Vendeur B,Cuisine,Art de la table,2023-06-11,49.33,1,19.44,2
+CMD01183,table jardin,Vendeur C,Jardin,Mobilier extérieur,2023-09-05,61.6,1,20.55,9
+CMD01184,barre de son vert,Vendeur E,High-Tech,Audio,2023-01-19,349.39,3,11.67,1
+CMD01184,boîte de rangement 93x55,Vendeur D,Maison,,2023-12-04,270.09,3,3.73,5
+CMD01185,applique murale vert 41 cm,Vendeur B,Maison,Luminaire,2023-11-15,33.14,5,22.31,9
+CMD01185,chaise pliante rouge 200x96,Vendeur F,,Mobilier extérieur,2023-03-08,335.29,4,15.41,5
+CMD01186,grille-pain noir,Vendeur D,Cuisine,Électroménager,2023-12-10,43.42,3,17.11,12
+CMD01186,gants jardinage gris 90 cm,Vendeur C,Jardin,Outillage,2023-04-29,184.05,1,1.63,2
+CMD01187,set couteaux 47x61,Vendeur A,Cuisine,Ustensile,2023-08-25,318.01,5,11.52,10
+CMD01187,table jardin gris 60 cm,Vendeur D,Jardin,Mobilier extérieur,2023-11-14,229.05,3,13.61,4
+CMD01188,tapis souris 46 cm,Vendeur D,High-Tech,Informatique,2023-12-09,74.59,4,1.74,2
+CMD01188,gourde isotherme blanc,Vendeur F,Sport,Plein air,2023-06-17,324.89,2,16.52,8
+CMD01189,gourde isotherme 43 cm,Vendeur D,Sport,Plein air,2023-07-19,288.53,3,24.76,10
+CMD01189,boîte de rangement rouge 50 cm modèle 5,Vendeur A,Maison,Rangement,2023-09-19,97.92,5,9.86,6
+CMD01190,sécateur bleu,Vendeur C,Jardin,Outillage,2023-07-15,336.79,2,7.21,14
+CMD01190,barre de son,Vendeur B,High-Tech,,2023-01-06,38.44,4,21.5,13
+CMD01191,lampe frontale 128x97 modèle 8,Vendeur F,Sport,Plein air,2023-11-16,98.52,5,6.73,9
+CMD01191,lampe frontale modèle 9,Vendeur C,Sport,Plein air,2023-01-18,188.65,1,13.08,10
+CMD01192,lampe,Vendeur E,Maison,Luminaire,2023-08-30,25.85,3,13.38,1
+CMD01192,arrosoir vert 172x115,Vendeur E,Jardin,Outillage,2023-09-20,107.88,4,14.45,10
+CMD01193,boîte de rangement blanc,Vendeur C,Maison,Rangement,2023-05-30,104.56,5,7.02,14
+CMD01193,mixeur plongeant 199x50,Vendeur E,Cuisine,Électroménager,2023-02-27,345.5,3,24.6,3
+CMD01194,haltère modèle 6,Vendeur A,Sport,Fitness,2023-09-11,258.69,1,1.31,8
+CMD01194,gants jardinage beige 131x21 modèle 8,Vendeur D,Jardin,Outillage,2023-06-04,273.0,5,17.07,1
+CMD01195,panier osier,Vendeur C,Maison,Rangement,2023-11-23,321.91,3,16.36,7
+CMD01195,table jardin,Vendeur A,Jardin,Mobilier extérieur,2023-12-11,270.76,1,0.3,2
+CMD01196,haltère rouge 172x104,Vendeur B,Sport,Fitness,2023-12-17,380.44,1,17.7,2
+CMD01196,panier osier blanc,Vendeur C,Maison,Rangement,2023-03-08,121.35,1,15.97,5
+CMD01197,sécateur gris modèle 5,Vendeur B,Jardin,Outillage,2023-05-12,179.03,4,24.49,4
+CMD01197,lampe frontale 61 cm,Vendeur A,Sport,Plein air,2023-04-02,18.77,1,14.28,5
+CMD01198,chaise pliante 55 cm,Vendeur E,Jardin,Mobilier extérieur,2023-09-12,284.5,4,11.95,7
+CMD01198,boîte de rangement gris 34x100,Vendeur F,,Rangement,2023-04-26,40.81,5,21.33,6
+CMD01199,cadre photo modèle 7,Vendeur A,Maison,Décoration,2023-05-29,254.09,3,12.16,11
+CMD01199,transat beige 44 cm,Vendeur D,,,2023-03-13,386.8,1,0.93,1
+CMD01200,mug 73 cm modèle 4,Vendeur A,Cuisine,Art de la table,2023-01-22,19.57,2,12.22,1
+CMD01200,chaise pliante,Vendeur A,Jardin,Mobilier extérieur,2023-05-05,185.19,2,20.88,2
+CMD01201,lampe 56 cm,Vendeur F,Maison,Luminaire,2023-09-12,232.51,2,8.04,13
+CMD01201,enceinte portable beige 62x76 modèle 1,Vendeur B,High-Tech,,2023-10-31,44.49,5,9.4,3
+CMD01202,cadre photo modèle 8,Vendeur F,,Décoration,2023-02-11,55.12,2,16.0,9
+CMD01202,sécateur modèle 5,Vendeur C,Jardin,Outillage,2023-05-03,170.42,5,5.89,2
+CMD01203,élastique résistance,Vendeur C,Sport,Fitness,2023-11-13,25.96,1,19.92,11
+CMD01203,sécateur 105x98,Vendeur D,Jardin,Outillage,2023-04-01,22.11,1,23.12,3
+CMD01204,casque bluetooth,Vendeur B,High-Tech,Audio,2023-09-06,300.1,3,5.75,2
+CMD01204,bouilloire bleu 11 cm,Vendeur B,Cuisine,Électroménager,2023-02-20,90.39,5,11.37,7
+CMD01205,grille-pain blanc 40 cm modèle 8,Vendeur D,Cuisine,Électroménager,2023-08-23,170.2,3,5.5,5
+CMD01205,élastique résistance modèle 9,Vendeur D,Sport,Fitness,2023-11-23,345.57,2,14.79,14
+CMD01206,sécateur beige,Vendeur E,Jardin,Outillage,2023-01-08,378.77,5,22.46,7
+CMD01206,lampadaire,Vendeur A,Maison,Luminaire,2023-08-29,183.71,2,2.08,13
+CMD01207,boîte de rangement noir 25 cm,Vendeur E,Maison,Rangement,2023-07-28,300.18,1,24.41,8
+CMD01207,tapis souris rouge modèle 6,Vendeur E,High-Tech,Informatique,2023-07-27,17.92,4,18.82,12
+CMD01208,élastique résistance,Vendeur C,Sport,Fitness,2023-12-17,355.75,1,9.57,8
+CMD01208,élastique résistance bleu 158x34,Vendeur F,Sport,Fitness,2023-07-07,375.96,5,21.78,12
+CMD01209,tapis souris 108x77,Vendeur E,High-Tech,Informatique,2023-04-26,332.68,4,17.75,11
+CMD01209,lampe frontale modèle 8,Vendeur A,Sport,Plein air,2023-08-20,36.67,2,7.21,2
+CMD01210,suspension,Vendeur C,Maison,Luminaire,2023-05-22,169.53,5,23.29,8
+CMD01210,poêle anti-adhésive bleu,Vendeur C,Cuisine,,2023-08-16,167.62,3,16.39,13
+CMD01211,planche à découper vert,Vendeur C,Cuisine,Ustensile,2023-10-31,72.84,3,5.67,6
+CMD01211,bouilloire 28 cm,Vendeur F,Cuisine,Électroménager,2023-03-17,278.68,2,4.03,2
+CMD01212,vase déco rouge,Vendeur B,Maison,Décoration,2023-10-22,152.3,5,24.39,9
+CMD01212,bouilloire modèle 9,Vendeur E,Cuisine,Électroménager,2023-01-13,135.86,3,11.85,5
+CMD01213,haltère,Vendeur B,Sport,Fitness,2023-10-17,272.81,1,7.7,7
+CMD01213,élastique résistance modèle 5,Vendeur B,Sport,Fitness,2023-08-17,13.91,5,21.24,11
+CMD01214,panier osier rouge,Vendeur B,Maison,Rangement,2023-07-21,287.81,4,9.24,6
+CMD01214,cadre photo,Vendeur D,Maison,Décoration,2023-06-26,119.01,4,18.22,7
+CMD01215,souris ergonomique,Vendeur E,High-Tech,Informatique,2023-11-03,303.67,1,0.17,11
+CMD01215,poêle anti-adhésive beige 97x94,Vendeur E,Cuisine,Ustensile,2023-03-31,297.24,2,0.67,1
+CMD01216,chargeur usb-c vert 196x102 modèle 2,Vendeur C,High-Tech,Téléphonie,2023-06-03,199.75,1,14.97,6
+CMD01216,lampe frontale noir 7 cm,Vendeur B,Sport,Plein air,2023-10-17,234.75,2,7.99,12
+CMD01217,câble lightning 155x101,Vendeur E,High-Tech,Téléphonie,2023-03-25,81.56,2,19.12,10
+CMD01217,tapis souris 51 cm modèle 6,Vendeur B,High-Tech,Informatique,2023-06-15,10.09,5,7.04,13
+CMD01218,sécateur bleu,Vendeur E,Jardin,Outillage,2023-06-24,247.3,5,21.15,12
+CMD01218,tapis yoga 112x37,Vendeur E,Sport,Fitness,2023-08-02,211.63,3,4.31,5
+CMD01219,étagère 40x74,Vendeur A,Maison,Rangement,2023-03-02,35.71,4,18.93,1
+CMD01219,casque bluetooth vert 22x116 modèle 2,Vendeur E,High-Tech,Audio,2023-01-17,86.13,2,4.62,6
+CMD01220,applique murale bleu modèle 1,Vendeur E,Maison,Luminaire,2023-03-16,90.71,2,24.11,3
+CMD01220,élastique résistance blanc 28 cm,Vendeur D,Sport,Fitness,2023-02-20,172.52,5,5.69,2
+CMD01221,grille-pain modèle 6,Vendeur D,Cuisine,Électroménager,2023-08-27,50.71,3,11.42,12
+CMD01221,verre à pied noir,Vendeur F,Cuisine,Art de la table,2023-08-16,150.14,1,24.97,8
+CMD01222,cadre photo beige,Vendeur F,Maison,Décoration,2023-08-13,370.49,2,1.62,4
+CMD01222,bouilloire modèle 5,Vendeur F,Cuisine,Électroménager,2023-11-01,377.57,3,11.9,10
+CMD01223,sécateur 22 cm modèle 1,Vendeur A,Jardin,Outillage,2023-09-19,201.76,1,24.3,7
+CMD01223,gourde isotherme,Vendeur D,Sport,Plein air,2023-03-20,84.76,4,12.26,5
+CMD01224,gourde isotherme modèle 8,Vendeur C,Sport,Plein air,2023-10-04,341.89,4,11.49,1
+CMD01224,tapis souris beige 67 cm,Vendeur E,High-Tech,Informatique,2023-12-04,271.63,5,17.13,10
+CMD01225,arrosoir beige,Vendeur C,Jardin,Outillage,2023-10-15,131.59,1,14.76,3
+CMD01225,set couteaux beige 109x27,Vendeur B,,Ustensile,2023-10-26,97.68,3,14.81,12
+CMD01226,miroir beige,Vendeur C,Maison,,2023-02-28,13.06,4,14.7,6
+CMD01226,sécateur 190x63 modèle 5,Vendeur C,Jardin,Outillage,2023-06-15,387.92,2,12.42,14
+CMD01227,panier osier bleu,Vendeur F,Maison,,2023-04-20,338.45,1,14.8,5
+CMD01227,étagère 60 cm,Vendeur C,Maison,Rangement,2023-09-29,84.03,4,6.28,9
+CMD01228,chaise pliante bleu,Vendeur D,Jardin,Mobilier extérieur,2023-01-10,110.83,5,20.22,14
+CMD01228,chaise pliante vert,Vendeur A,Jardin,Mobilier extérieur,2023-09-25,255.4,4,6.67,5
+CMD01229,coque silicone rouge 64 cm,Vendeur D,High-Tech,Téléphonie,2023-12-18,171.7,1,5.05,5
+CMD01229,barre de son rouge,Vendeur A,High-Tech,Audio,2023-05-13,26.85,1,7.85,5
+CMD01230,bougie parfumée modèle 2,Vendeur E,Maison,Décoration,2023-07-06,295.12,1,13.05,14
+CMD01230,gourde isotherme 54 cm,Vendeur F,Sport,Plein air,2023-09-12,98.2,4,5.45,2
+CMD01231,barre de son gris modèle 9,Vendeur D,High-Tech,Audio,2023-05-21,192.57,2,24.08,13
+CMD01231,coque silicone modèle 1,Vendeur F,High-Tech,Téléphonie,2023-09-01,367.4,2,6.32,7
+CMD01232,assiette céramique bleu,Vendeur D,Cuisine,Art de la table,2023-12-25,371.37,3,7.52,14
+CMD01232,chargeur usb-c,Vendeur D,High-Tech,Téléphonie,2023-04-18,316.78,3,21.66,14
+CMD01233,arrosoir,Vendeur F,Jardin,Outillage,2023-07-31,108.08,1,8.8,10
+CMD01233,lampe frontale,Vendeur B,Sport,Plein air,2023-08-21,6.21,2,15.71,6
+CMD01234,élastique résistance,Vendeur C,Sport,Fitness,2023-02-26,183.34,2,6.52,11
+CMD01234,gourde isotherme beige,Vendeur B,Sport,Plein air,2023-05-25,13.19,1,23.08,11
+CMD01235,élastique résistance 81 cm modèle 2,Vendeur C,Sport,Fitness,2023-02-15,72.2,5,2.93,12
+CMD01235,gourde isotherme 39 cm modèle 8,Vendeur D,Sport,Plein air,2023-08-21,56.43,2,15.0,14
+CMD01236,assiette céramique vert 83x67,Vendeur F,Cuisine,Art de la table,2023-12-13,185.97,1,11.72,14
+CMD01236,mug vert 11 cm,Vendeur B,Cuisine,Art de la table,2023-07-23,191.02,3,24.92,11
+CMD01237,haltère modèle 9,Vendeur A,Sport,Fitness,2023-01-03,234.29,3,4.25,8
+CMD01237,set couteaux noir 68 cm,Vendeur C,Cuisine,Ustensile,2023-03-09,300.39,4,7.07,5
+CMD01238,sac à dos rando 76 cm,Vendeur F,Sport,Plein air,2023-09-22,256.48,4,1.33,3
+CMD01238,lampadaire 163x82,Vendeur A,,Luminaire,2023-04-04,339.11,2,3.09,2
+CMD01239,chargeur usb-c bleu,Vendeur E,High-Tech,Téléphonie,2023-04-03,307.9,2,10.41,2
+CMD01239,chargeur usb-c,Vendeur E,High-Tech,Téléphonie,2023-12-13,372.01,1,20.92,3
+CMD01240,lampadaire 47 cm,Vendeur F,Maison,Luminaire,2023-08-24,250.83,4,8.12,12
+CMD01240,haltère rouge,Vendeur E,Sport,Fitness,2023-04-19,155.65,4,6.38,4
+CMD01241,table jardin blanc 130x114,Vendeur C,Jardin,Mobilier extérieur,2023-01-11,361.98,5,3.28,11
+CMD01241,bougie parfumée beige 114x98 modèle 7,Vendeur A,Maison,Décoration,2023-09-20,20.97,3,24.33,11
+CMD01242,tapis souris modèle 7,Vendeur A,High-Tech,Informatique,2023-12-18,363.35,4,7.51,3
+CMD01242,mixeur plongeant rouge,Vendeur D,Cuisine,Électroménager,2023-09-25,42.32,5,20.32,6
+CMD01243,mug 120x25 modèle 5,Vendeur C,Cuisine,,2023-02-11,236.95,4,18.93,8
+CMD01243,gourde isotherme noir,Vendeur F,Sport,Plein air,2023-06-24,47.0,5,0.45,7
+CMD01244,lampadaire,Vendeur D,Maison,Luminaire,2023-03-29,124.61,5,9.02,11
+CMD01244,sécateur modèle 1,Vendeur B,Jardin,,2023-02-14,195.04,2,16.24,7
+CMD01245,haltère noir 199x76,Vendeur D,Sport,Fitness,2023-02-14,12.75,4,14.63,4
+CMD01245,mug 146x114,Vendeur F,Cuisine,,2023-07-20,223.95,3,0.93,7
+CMD01246,arrosoir noir 65 cm modèle 6,Vendeur D,Jardin,Outillage,2023-04-29,280.52,1,4.03,12
+CMD01246,câble lightning 89 cm,Vendeur C,High-Tech,Téléphonie,2023-06-26,290.58,4,24.0,14
+CMD01247,planche à découper 175x82 modèle 7,Vendeur D,Cuisine,Ustensile,2023-03-24,124.94,2,13.92,1
+CMD01247,planche à découper noir 78x35,Vendeur D,Cuisine,Ustensile,2023-07-02,106.84,3,19.62,13
+CMD01248,panier osier 132x78,Vendeur A,Maison,Rangement,2023-05-17,389.99,5,15.24,14
+CMD01248,étagère modèle 5,Vendeur F,Maison,Rangement,2023-01-22,179.4,5,12.46,14
+CMD01249,lampe 21x51,Vendeur D,Maison,Luminaire,2023-11-28,139.82,5,4.28,5
+CMD01249,assiette céramique,Vendeur B,Cuisine,Art de la table,2023-08-01,321.7,4,22.95,8
+CMD01250,lampe frontale modèle 6,Vendeur D,Sport,Plein air,2023-01-16,392.87,2,10.85,7
+CMD01250,panier osier,Vendeur C,Maison,Rangement,2023-11-25,170.63,5,21.84,12
+CMD01251,planche à découper,Vendeur B,Cuisine,Ustensile,2023-01-05,355.59,5,19.71,11
+CMD01251,arrosoir gris 21 cm,Vendeur E,Jardin,Outillage,2023-11-29,117.15,1,12.79,5
+CMD01252,lampe frontale bleu,Vendeur D,Sport,,2023-11-22,394.85,1,18.3,14
+CMD01252,planche à découper 5 cm,Vendeur B,Cuisine,Ustensile,2023-11-18,323.13,5,14.14,11
+CMD01253,élastique résistance blanc,Vendeur B,Sport,Fitness,2023-06-29,46.56,5,14.56,14
+CMD01253,set couteaux rouge 74x77 modèle 9,Vendeur D,Cuisine,Ustensile,2023-02-20,237.35,5,19.47,14
+CMD01254,mug 25 cm modèle 3,Vendeur D,Cuisine,Art de la table,2023-09-13,285.9,2,24.2,9
+CMD01254,élastique résistance gris modèle 7,Vendeur A,Sport,Fitness,2023-12-22,52.74,5,7.24,9
+CMD01255,enceinte portable blanc 11 cm,Vendeur C,High-Tech,Audio,2023-07-10,356.18,2,4.58,12
+CMD01255,chaise pliante vert,Vendeur D,Jardin,,2023-03-04,192.71,5,3.32,3
+CMD01256,lampe frontale beige 48 cm,Vendeur F,Sport,Plein air,2023-08-19,356.57,3,16.15,14
+CMD01256,tapis souris noir modèle 9,Vendeur E,High-Tech,Informatique,2023-01-13,304.26,5,13.04,13
+CMD01257,chaise pliante bleu 79 cm,Vendeur E,Jardin,Mobilier extérieur,2023-03-03,244.71,4,14.72,8
+CMD01257,miroir noir 63x56 modèle 5,Vendeur A,Maison,,2023-08-12,65.92,4,16.97,1
+CMD01258,sac à dos rando blanc 116x35 modèle 4,Vendeur E,,,2023-04-03,236.48,4,12.72,9
+CMD01258,table jardin rouge 24x54,Vendeur E,Jardin,Mobilier extérieur,2023-05-18,271.66,2,19.07,11
+CMD01259,câble lightning blanc 36 cm,Vendeur D,High-Tech,Téléphonie,2023-10-18,384.73,5,11.29,1
+CMD01259,arrosoir vert,Vendeur C,Jardin,,2023-12-01,337.76,2,14.63,9
+CMD01260,grille-pain noir,Vendeur C,Cuisine,Électroménager,2023-03-24,351.92,2,15.26,13
+CMD01260,mug bleu,Vendeur B,Cuisine,Art de la table,2023-06-25,186.62,5,8.21,12
+CMD01261,clavier sans fil 67 cm,Vendeur E,High-Tech,,2023-01-02,37.05,1,13.47,14
+CMD01261,transat blanc,Vendeur A,Jardin,Mobilier extérieur,2023-06-30,54.28,3,23.41,8
+CMD01262,applique murale vert modèle 8,Vendeur C,Maison,Luminaire,2023-01-11,19.53,4,22.61,12
+CMD01262,haltère vert,Vendeur E,Sport,Fitness,2023-01-04,81.54,5,16.8,10
+CMD01263,tapis yoga bleu,Vendeur C,Sport,Fitness,2023-02-03,80.78,1,24.8,12
+CMD01263,sac à dos rando modèle 6,Vendeur D,Sport,Plein air,2023-12-15,338.51,4,6.85,11
+CMD01264,lampe frontale vert,Vendeur C,Sport,Plein air,2023-09-11,7.04,2,8.37,10
+CMD01264,étagère 36x100,Vendeur A,Maison,Rangement,2023-04-26,194.59,1,14.81,11
+CMD01265,set couteaux,Vendeur B,Cuisine,Ustensile,2023-05-07,377.7,5,15.49,13
+CMD01265,étagère 13 cm,Vendeur A,Maison,Rangement,2023-08-17,368.05,4,1.37,10
+CMD01266,table jardin 57 cm modèle 1,Vendeur D,Jardin,Mobilier extérieur,2023-02-22,156.65,4,22.0,10
+CMD01266,bougie parfumée bleu 37x95,Vendeur B,Maison,Décoration,2023-11-30,362.23,2,15.93,5
+CMD01267,poêle anti-adhésive rouge 131x85,Vendeur C,Cuisine,Ustensile,2023-09-04,127.92,5,19.39,3
+CMD01267,sécateur blanc 76 cm,Vendeur D,Jardin,Outillage,2023-11-05,140.81,2,16.01,4
+CMD01268,bougie parfumée gris,Vendeur C,Maison,Décoration,2023-04-07,248.36,4,8.22,2
+CMD01268,chaise pliante 143x114,Vendeur C,Jardin,,2023-09-11,323.87,4,5.13,3
+CMD01269,cadre photo 51 cm modèle 1,Vendeur B,Maison,,2023-01-06,83.14,2,5.47,5
+CMD01269,coque silicone modèle 3,Vendeur D,High-Tech,Téléphonie,2023-10-11,263.67,1,8.46,4
+CMD01270,poêle anti-adhésive,Vendeur D,Cuisine,Ustensile,2023-05-03,351.96,1,2.96,3
+CMD01270,barre de son bleu,Vendeur E,High-Tech,Audio,2023-09-30,79.7,5,7.35,3
+CMD01271,bouilloire,Vendeur B,Cuisine,Électroménager,2023-01-28,292.28,4,19.77,10
+CMD01271,applique murale 72 cm,Vendeur F,Maison,Luminaire,2023-09-18,382.52,4,6.71,7
+CMD01272,tapis yoga vert 60x67 modèle 2,Vendeur B,Sport,Fitness,2023-04-17,301.89,3,11.11,6
+CMD01272,souris ergonomique beige 45 cm modèle 1,Vendeur B,High-Tech,Informatique,2023-01-22,179.47,3,16.13,6
+CMD01273,miroir 29x89 modèle 4,Vendeur F,Maison,Décoration,2023-09-14,135.05,3,18.63,13
+CMD01273,mixeur plongeant modèle 5,Vendeur C,Cuisine,Électroménager,2023-12-28,329.81,4,23.65,14
+CMD01274,tapis yoga 31 cm,Vendeur E,Sport,Fitness,2023-08-30,236.87,5,18.94,12
+CMD01274,gants jardinage 52 cm modèle 3,Vendeur C,Jardin,Outillage,2023-02-13,377.62,1,12.5,11
+CMD01275,set couteaux modèle 1,Vendeur E,Cuisine,Ustensile,2023-04-26,315.22,2,3.84,6
+CMD01275,lampe frontale 62 cm,Vendeur C,Sport,Plein air,2023-07-15,41.83,1,16.87,3
+CMD01276,étagère 94x104,Vendeur D,Maison,Rangement,2023-11-05,27.69,5,0.28,6
+CMD01276,arrosoir noir 31 cm modèle 4,Vendeur C,Jardin,Outillage,2023-03-22,175.72,4,3.97,10
+CMD01277,verre à pied blanc 82 cm,Vendeur E,Cuisine,Art de la table,2023-04-14,134.91,5,21.98,8
+CMD01277,table jardin vert 27 cm,Vendeur B,Jardin,Mobilier extérieur,2023-02-16,360.49,4,11.45,11
+CMD01278,clavier sans fil blanc 42 cm,Vendeur A,High-Tech,Informatique,2023-10-19,280.73,2,22.72,7
+CMD01278,haltère blanc 64 cm modèle 8,Vendeur D,Sport,Fitness,2023-07-08,140.74,4,21.39,7
+CMD01279,applique murale 41x90,Vendeur F,Maison,Luminaire,2023-05-09,380.26,2,11.77,5
+CMD01279,casque bluetooth beige 6 cm,Vendeur B,High-Tech,Audio,2023-01-10,179.06,2,5.42,1
+CMD01280,élastique résistance,Vendeur D,Sport,Fitness,2023-08-15,277.69,4,1.31,1
+CMD01280,vase déco rouge 48 cm,Vendeur F,Maison,Décoration,2023-04-14,269.24,2,23.97,2
+CMD01281,souris ergonomique bleu,Vendeur D,,Informatique,2023-03-27,375.87,1,5.81,2
+CMD01281,poêle anti-adhésive 40 cm,Vendeur C,,Ustensile,2023-03-30,22.36,2,10.28,13
+CMD01282,lampe frontale noir,Vendeur F,Sport,Plein air,2023-02-22,158.48,2,8.3,11
+CMD01282,mug bleu,Vendeur A,Cuisine,,2023-09-04,96.88,5,18.97,2
+CMD01283,bouilloire 72x102 modèle 8,Vendeur F,Cuisine,Électroménager,2023-08-08,351.55,2,6.95,11
+CMD01283,étagère gris 33x105,Vendeur F,Maison,Rangement,2023-08-01,280.03,2,15.2,7
+CMD01284,sac à dos rando bleu 31 cm modèle 3,Vendeur E,Sport,,2023-04-04,221.79,2,5.91,2
+CMD01284,arrosoir bleu 86 cm modèle 8,Vendeur A,Jardin,Outillage,2023-06-09,380.65,3,9.96,3
+CMD01285,sécateur modèle 7,Vendeur D,Jardin,Outillage,2023-08-05,342.35,3,14.88,3
+CMD01285,haltère 140x45 modèle 4,Vendeur A,Sport,Fitness,2023-05-12,10.07,5,18.26,6
+CMD01286,arrosoir vert,Vendeur D,Jardin,Outillage,2023-08-01,354.57,1,9.62,10
+CMD01286,barre de son,Vendeur A,High-Tech,Audio,2023-08-12,262.11,4,18.39,4
+CMD01287,transat 23 cm modèle 3,Vendeur A,Jardin,Mobilier extérieur,2023-07-05,51.11,1,16.11,7
+CMD01287,chaise pliante 156x104,Vendeur E,Jardin,Mobilier extérieur,2023-09-23,126.65,4,18.81,12
+CMD01288,suspension bleu,Vendeur C,Maison,Luminaire,2023-11-22,7.54,2,20.41,1
+CMD01288,applique murale 200x37 modèle 3,Vendeur E,Maison,Luminaire,2023-12-23,379.65,4,14.18,4
+CMD01289,casque bluetooth beige 18 cm,Vendeur B,High-Tech,Audio,2023-01-31,36.52,1,9.44,5
+CMD01289,cadre photo vert modèle 1,Vendeur A,Maison,Décoration,2023-01-16,88.37,1,9.39,9
+CMD01290,set couteaux gris,Vendeur C,Cuisine,Ustensile,2023-08-31,267.71,4,15.27,6
+CMD01290,mixeur plongeant modèle 2,Vendeur E,Cuisine,Électroménager,2023-01-02,115.39,2,9.21,10
+CMD01291,arrosoir gris,Vendeur F,Jardin,Outillage,2023-12-05,133.58,4,5.84,8
+CMD01291,table jardin,Vendeur F,Jardin,Mobilier extérieur,2023-06-28,157.02,5,4.88,3
+CMD01292,élastique résistance,Vendeur D,Sport,Fitness,2023-03-07,382.25,4,16.57,4
+CMD01292,casque bluetooth rouge 54 cm,Vendeur B,High-Tech,Audio,2023-03-29,289.07,4,23.79,11
+CMD01293,boîte de rangement gris,Vendeur E,Maison,Rangement,2023-03-11,30.54,3,9.43,12
+CMD01293,sécateur gris,Vendeur F,Jardin,Outillage,2023-04-30,377.09,5,9.19,14
+CMD01294,planche à découper beige,Vendeur C,Cuisine,Ustensile,2023-10-23,320.02,2,12.99,10
+CMD01294,haltère vert,Vendeur D,Sport,Fitness,2023-02-24,63.23,3,3.65,11
+CMD01295,étagère modèle 5,Vendeur F,Maison,Rangement,2023-06-13,386.77,1,24.53,6
+CMD01295,clavier sans fil 27 cm,Vendeur F,High-Tech,Informatique,2023-04-18,159.76,2,24.78,9
+CMD01296,arrosoir vert 75 cm,Vendeur B,Jardin,Outillage,2023-08-05,132.75,5,21.65,1
+CMD01296,planche à découper blanc 30 cm,Vendeur A,Cuisine,Ustensile,2023-12-02,148.08,5,2.55,13
+CMD01297,coque silicone 151x103,Vendeur D,High-Tech,Téléphonie,2023-08-07,388.04,4,6.13,2
+CMD01297,coque silicone 90 cm,Vendeur D,High-Tech,Téléphonie,2023-09-08,346.63,4,6.88,11
+CMD01298,arrosoir modèle 8,Vendeur C,Jardin,Outillage,2023-01-06,279.02,1,19.86,3
+CMD01298,sécateur noir,Vendeur E,Jardin,Outillage,2023-11-27,78.03,1,9.84,14
+CMD01299,lampe frontale,Vendeur B,Sport,Plein air,2023-02-02,386.44,1,4.52,10
+CMD01299,casque bluetooth bleu modèle 5,Vendeur A,High-Tech,Audio,2023-10-12,38.42,1,12.65,6
