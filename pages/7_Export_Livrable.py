@@ -24,7 +24,8 @@ if df is None:
     st.warning("Aucun dataset chargé. Retourne à l'accueil pour en charger un.")
     st.stop()
 
-_enriched = [c for c in (enrich.RECAT_COLS + enrich.COLOR_COLS + enrich.DIM_COLS) if c in df.columns]
+_enriched = [c for c in (enrich.RECAT_COLS + enrich.UNIVERS_COLS + enrich.COLOR_COLS + enrich.DIM_COLS)
+             if c in df.columns]
 if _enriched:
     st.caption("Colonnes enrichies présentes : " + ", ".join(f"`{c}`" for c in _enriched))
 else:

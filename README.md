@@ -20,7 +20,8 @@ Elle fonctionne avec n'importe quel fichier tabulaire (Excel, CSV, Parquet) comp
 ## Fonctionnalités
 
 - Statistiques descriptives : KPI, évolution temporelle, répartition par vendeur / univers / nature, qualité des données.
-- Recatégorisation de la colonne `Nature` entraînée sur le fichier chargé (TF-IDF + régression logistique), en une ou deux passes.
+- Recatégorisation de la `Nature` entraînée sur le fichier chargé (TF-IDF + régression logistique), en une ou deux passes.
+- Recatégorisation de l'`Univers`, déduite de la Nature corrigée pour rester cohérente avec la hiérarchie (Univers ⊃ Nature).
 - Extraction de couleur et de dimension à partir des libellés produits.
 - Recherche multi-critères (texte libre + prix / couleur / dimension / vendeur).
 - Visualisations : graphe relationnel, projection 2D/3D, diagramme de Sankey.
@@ -78,7 +79,7 @@ Le `.gitignore` exclut les classeurs Excel (`*.xlsb`, `*.xls`, `*.xlsx`), `data/
 | 0 | Recherche sémantique | Recherche multi-critères + voisins TF-IDF, sur données brutes ou recatégorisées |
 | 1 | Données brutes | KPI, séries temporelles, répartitions, qualité par vendeur |
 | 2 | Visualisation graphe | Graphe relationnel, UMAP, Sankey, avant/après |
-| 3 | Catégorisation Nature | Recatégorisation (bouton), une ou deux passes |
+| 3 | Catégorisation Nature / Univers | Recatégorisation (bouton) : Nature (1 ou 2 passes) et Univers (cohérent avec la Nature) |
 | 4 | Effet de la correction | V de Cramér, matrices, taux de correction par vendeur |
 | 5 | Extraction couleur | Couleurs extraites des libellés (bouton) |
 | 6 | Extraction dimension | Dimensions L x l x H, diamètre, cote isolée (bouton) |
@@ -91,6 +92,7 @@ L'application calcule l'enrichissement sur le fichier chargé, via trois actions
 1. Recatégorisation Nature (page 3). Un modèle TF-IDF (mots et caractères), complété par le vendeur et le prix lorsqu'ils sont présents, est entraîné sur les lignes dont la `Nature` est connue. Sortie : `Nature_predite`, `Nature_Score`, `Nature_Commentaire`.
    - Une passe : si le score est supérieur ou égal au seuil, on applique la prédiction, sinon on conserve la Nature d'origine.
    - Deux passes (option) : self-training. Les lignes que la passe 1 prédit autrement avec confiance sont ré-étiquetées, puis le modèle est ré-entraîné. Cascade : score Pass 2 supérieur ou égal au seuil Pass 2 (0,50 par défaut), sinon score Pass 1 supérieur ou égal au seuil Pass 1 (0,80 par défaut), sinon Nature d'origine. Seuils réglables ; colonnes `Nature_Score_Pass1` et `Nature_Score_Pass2` ajoutées.
+1bis. Recatégorisation Univers (page 3, après la Nature). On apprend la table `Nature → Univers majoritaire` et on attribue à chaque ligne l'Univers de sa Nature corrigée (cohérence garantie : une Nature donnée ne peut pointer que vers un seul Univers). Pour les lignes sans Nature exploitable, un modèle libellé→Univers prend le relais. Sortie : `Univers_predite`, `Univers_Score`, `Univers_Commentaire`.
 2. Extraction couleur (page 5) : `couleur_extraite`, `Couleur_Commentaire`, `nb_couleurs_detectees`, etc.
 3. Extraction dimension (page 6) : `dim_label`, `Dimension_Commentaire`, diamètre, cote isolée, etc.
 
@@ -106,7 +108,7 @@ app_analyse_data_ecommerce/
 ├── requirements.txt
 ├── core/                   Logique métier
 │   ├── data_loader.py      Chargement, normalisation, reset au changement de fichier
-│   ├── recat.py            Recatégorisation Nature (une ou deux passes)
+│   ├── recat.py            Recatégorisation générique (Nature ou Univers, 1 ou 2 passes)
 │   ├── enrich.py           Orchestration des calculs et dataset de travail
 │   ├── extract.py          Extraction couleur et dimension
 │   ├── metrics.py          Statistiques globales

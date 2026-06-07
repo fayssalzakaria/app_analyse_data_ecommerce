@@ -18,13 +18,14 @@ import streamlit as st
 
 from core.data_loader import obtenir_dataframe_actif, reinitialiser_si_changement_dataset
 from core.extract import extraire_couleur_contextuelle_serie, extraire_dimensions_v2_serie
-from core.recat import executer_recat
+from core.recat import executer_recat, _commentaire
 
 WORK_KEY = "work_enriched_df"
 SRC_KEY = "work_enriched_src"
 
 RECAT_COLS = ["Nature_predite", "Nature_Score", "Nature_Commentaire",
               "Nature_Score_Pass1", "Nature_Score_Pass2"]
+UNIVERS_COLS = ["Univers_predite", "Univers_Score", "Univers_Commentaire"]
 COLOR_COLS = ["couleur_extraite", "couleurs_toutes", "nb_couleurs_detectees",
               "couleur_decision", "couleur_score", "Couleur_Commentaire"]
 DIM_COLS = ["L_cm", "l_cm", "H_cm", "dim_label", "diametre_cm", "dimension_simple_cm",
@@ -68,21 +69,99 @@ def reinitialiser_df_travail() -> None:
 
 
 # ------------------------------------------------------------------
-# 1) Recatégorisation Nature
+# 1) Recatégorisation Nature (et, génériquement, n'importe quelle cible)
 # ------------------------------------------------------------------
-def calculer_recat(two_pass: bool = False, seuil_p2: float = 0.50, seuil_p1: float = 0.80,
-              use_vendeur: bool = True, use_prix: bool = True) -> dict:
+def calculer_recat(cible: str = "Nature", two_pass: bool = False,
+                   seuil_p2: float = 0.50, seuil_p1: float = 0.80,
+                   use_vendeur: bool = True, use_prix: bool = True,
+                   colonnes_aux: list[str] | None = None) -> dict:
     df = obtenir_df_travail()
     if df is None:
         return {"ok": False, "msg": "Aucun dataset chargé."}
-    # On repart toujours du dataset de base pour la recat (sinon Pass2 réécrirait par-dessus
-    # une Nature déjà modifiée). On retire d'éventuelles colonnes recat précédentes.
-    base = df.drop(columns=[c for c in RECAT_COLS if c in df.columns], errors="ignore")
-    out, info = executer_recat(base, two_pass=two_pass, seuil_p2=seuil_p2, seuil_p1=seuil_p1,
-                          use_vendeur=use_vendeur, use_prix=use_prix)
+    # On retire d'éventuelles colonnes de prédiction précédentes pour cette cible,
+    # afin de toujours réentraîner depuis la cible d'origine.
+    a_retirer = [f"{cible}_predite", f"{cible}_Score", f"{cible}_Commentaire",
+                 f"{cible}_Score_Pass1", f"{cible}_Score_Pass2"]
+    base = df.drop(columns=[c for c in a_retirer if c in df.columns], errors="ignore")
+    out, info = executer_recat(base, cible=cible, two_pass=two_pass,
+                               seuil_p2=seuil_p2, seuil_p1=seuil_p1,
+                               use_vendeur=use_vendeur, use_prix=use_prix,
+                               colonnes_aux=colonnes_aux)
     if info.get("ok"):
         _store(out)
-        st.session_state["recat_info"] = info  # purgé au changement de dataset (préfixe "recat_")
+        st.session_state[f"recat_info_{cible}"] = info  # purgé au changement de dataset (préfixe "recat_")
+    return info
+
+
+# ------------------------------------------------------------------
+# 1bis) Recatégorisation Univers — cohérente avec la Nature corrigée
+# ------------------------------------------------------------------
+def calculer_univers(use_vendeur: bool = True, use_prix: bool = True) -> dict:
+    """Prédit/corrige l'Univers en restant cohérent avec la Nature corrigée.
+
+    Méthode (la plus cohérente vu la hiérarchie Univers ⊃ Nature) :
+    - (A) table apprise `Nature_predite -> Univers majoritaire` : chaque ligne reçoit
+      l'Univers canonique de sa Nature (cohérence garantie), avec un score = pureté
+      (part de cette Nature qui tombe dans cet Univers) ;
+    - (B) repli : pour les lignes sans Nature exploitable, un modèle libellé(+Nature)
+      -> Univers prédit l'Univers.
+    Nécessite d'avoir lancé la recatégorisation Nature au préalable.
+    """
+    df = obtenir_df_travail()
+    if df is None:
+        return {"ok": False, "msg": "Aucun dataset chargé."}
+    if "Univers" not in df.columns:
+        return {"ok": False, "msg": "Colonne 'Univers' absente du fichier."}
+    if "Nature_predite" not in df.columns:
+        return {"ok": False, "msg": "Lance d'abord la recatégorisation Nature : l'Univers en dépend."}
+
+    df = df.drop(columns=[c for c in UNIVERS_COLS if c in df.columns], errors="ignore").copy()
+
+    # (A) Table Nature_predite -> Univers majoritaire, apprise sur les lignes connues.
+    connu = df[df["Univers"].notna() & df["Nature_predite"].notna()]
+    mapping, purete = {}, {}
+    if len(connu):
+        comptes = connu.groupby(["Nature_predite", "Univers"]).size()
+        for nature, grp in comptes.groupby(level=0):
+            s = grp.droplevel(0)
+            mapping[nature] = s.idxmax()
+            purete[nature] = float(s.max() / s.sum())
+
+    nat = df["Nature_predite"]
+    univ_pred = nat.map(mapping)
+    univ_score = nat.map(purete)
+    source = pd.Series(np.where(univ_pred.notna(), "table_nature", None), index=df.index)
+
+    # (B) Repli modèle pour les lignes sans correspondance (Nature vide ou inconnue).
+    manque = univ_pred.isna()
+    if manque.any():
+        out_b, info_b = executer_recat(df, cible="Univers", colonnes_aux=["Nature_predite"],
+                                       use_vendeur=use_vendeur, use_prix=use_prix)
+        if info_b.get("ok"):
+            univ_pred = univ_pred.where(~manque, out_b["Univers_predite"])
+            univ_score = univ_score.where(~manque, out_b["Univers_Score"])
+            source = source.where(~manque, "modele_libelle")
+
+    # Finalisation : si toujours rien, on conserve l'Univers d'origine.
+    univ_pred = univ_pred.where(univ_pred.notna(), df["Univers"])
+    orig = df["Univers"].fillna("__VIDE__").astype(str).values
+    pred_str = univ_pred.fillna("__VIDE__").astype(str).values
+    df["Univers_predite"] = pd.Series(pred_str, index=df.index).where(lambda s: s != "__VIDE__", np.nan)
+    df["Univers_Score"] = np.round(univ_score.fillna(0.0).astype(float).values, 4)
+    is_modif = pred_str != orig
+    df["Univers_Commentaire"] = _commentaire(is_modif, df["Univers_Score"].values)
+
+    _store(df)
+    info = {
+        "ok": True, "cible": "Univers",
+        "n_lignes": int(len(df)),
+        "n_modifies": int(is_modif.sum()),
+        "pct_modifies": float(is_modif.mean() * 100),
+        "n_natures_mappees": len(mapping),
+        "n_par_table": int((source == "table_nature").sum()),
+        "n_par_modele": int((source == "modele_libelle").sum()),
+    }
+    st.session_state["recat_info_Univers"] = info
     return info
 
 
